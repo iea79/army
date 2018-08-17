@@ -70,7 +70,15 @@ $(document).ready(function() {
     //     });
     // });
    	// setGridMatch($('[data-grid-match] .grid__item'));
-   	gridMatch();
+   	// gridMatch();
+
+   	$('.lang__current').on('click', function(event) {
+   		event.preventDefault();
+   		$(this).closest('.lang').toggleClass('open');
+   	});
+   	$('.lang').on('mouseleave', function() {
+   		$(this).removeClass('open');
+   	});
 });
 
 $(window).resize(function(event) {
@@ -79,7 +87,7 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
    	// setGridMatch($('[data-grid-match] .grid__item'));
-   	gridMatch();
+   	// gridMatch();
 }
 
 function gridMatch() {

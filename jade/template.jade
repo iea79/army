@@ -4,16 +4,20 @@ html(lang="en")
 	include head.jade
 
 	body
+
+		include aside.jade
+
 		.wrapper
 			
 			include header.jade
+			
 
 			// begin main__content
 			main.main__content
-				.container_center
 					
-					block content
+				block content
 
 			// end main__content 
 
-		include footer.jade
+
+		include scripts.jade

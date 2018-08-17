@@ -10,9 +10,9 @@
 // Fonts
 // @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900);
 // @import url(https://fonts.googleapis.com/css?family=Lora);
-@include font-face("Century Gothic", fonts/CenturyGothic, normal, normal);
-@include font-face("Century Gothic Bold", fonts/CenturyGothic, bold, normal);
-@include font-face("ArialMT", fonts/CenturyGothic, normal, normal);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic');
+@include font-face("Futura Futuris C", "../fonts/FuturaFuturisC", normal, normal);
+@include font-face("Futura Futuris C", "../fonts/FuturaFuturisC-Bold", bold, normal);
 
 
  // Import files
@@ -47,12 +47,30 @@
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto (-$footer_height) auto; // отрицательный нижний отступ на высоту футера
+    margin: 0 auto;
+    padding-left: 330px;
+}
+
+.aside {
+	position: fixed;
+	width: 330px;
+    height: 100%;
+	overflow-x: auto;
+	z-index: 10;
+	&__wrapper {
+		padding: 30px;
+		min-height: 100%;
+		position: relative;
+		background-color: #ececec;
+		padding-bottom: 150px;
+		
+	}
 }
 
 .container_center {
 	max-width: $container_width;
-	padding: 0 15px;
+	min-width: $container_width;
+	padding: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -85,7 +103,7 @@
 }
 
 .copy {
-	float: right;
+	
 }
 
 // Breadcrumb ==================================================================
@@ -152,15 +170,113 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
+	// background-color: #ccc;
+	padding: 16px 31px 12px;
+	border-bottom: 1px solid #ececec;
+	font-size: 14px;
 	@extend %clear_a;
+	&__left {
+		float: left;
+	}
+	&__right {
+		float: right;
+	}
+	&__link {
+		color: $main_color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		[class*="icon-"] {
+			margin-right: 8px;
+		}
+	}
+	.lang {
+		margin-left: 15px;
+	}
+}
+
+.account {
+	[class*="icon-"] {
+		margin-right: 8px;
+	}
+}
+
+[class*="icon-"] {
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon {
+	&-attention {
+		&:before {
+			content: url('../img/attention.png');
+		}
+	}
+	&-user {
+		&:before {
+			content: url('../img/user.png');
+		}
+	}
+	&-quest {
+		&:before {
+			content: url('../img/question-mark.png');
+		}
+	}
+	&-quest-lg {
+		&:before {
+			content: url('../img/question-mark-lg.png');
+		}
+	}
+}
+
+$pm: 16px;
+.lang {
+	display: inline-block;
+	background-color: #f8f8f8;
+	padding: $pm 10px;
+	margin: -$pm 0;
+	position: relative;
+	&__current {
+		cursor: pointer;
+	}
+	&.open {
+		.lang__list {
+			display: block;
+		}
+	}
+	&__flag {
+		margin-right: 8px;
+		width: 23px;
+	}
+	&__list {
+		display: none;
+		background-color: #f8f8f8;
+		list-style: none;
+		padding: 16px 10px;
+		margin: 0;
+		width: 100%;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}
+	&__item {
+
+	}
+	&__link {
+		color: $main_color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .logo {
-	background-color: #ddd;
-	float: left;
-	width: 150px;
+	// background-color: #ddd;
+	// float: left;
+	// width: 150px;
+	display: inline-block;
+	margin-bottom: 40px;
 }
 
 // stiky menu
@@ -173,21 +289,29 @@
 
 /* Navbar
 -------------------------------------------------------------------------------*/
-.navbar {
+.nav {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	text-align: right;
+	list-style: none;
+	// overflow: hidden;
+	// text-align: right;
 	&__item {
-		display: inline-block;
+		// display: block;
+		margin-bottom: 20px;
 	}
-	&__link {}
+	&__link {
+		font-family: "Futura Futuris C";
+		font-weight: 400;
+		font-size: 18px;
+		color: $main_color;
+		text-decoration: none;
+	}
 }
 
 /* Middle
  ----------------------------------------------------------------------------- */
 .main__content {
-	padding-bottom: $footer_height;
+	// padding-bottom: $footer_height;
 	@extend %clear_a;
 }
 
@@ -195,9 +319,18 @@
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	height: $footer_height;
-	background: #BFF08E;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 210px;
+	padding: 30px;
+	bottom: 15px;
+	color: $color_success;
+	font-size: 14px;
+	line-height: 1.4;
+	// height: $footer_height;
+	// background: #BFF08E;
 	@extend %clear_all;
 	.container_center {
 		padding-top: 10px;

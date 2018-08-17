@@ -1,21 +1,24 @@
 // begin header 
 header.header
-	.container_center
-
-		a.logo
-			img(src="img/logo.png")
-
-		// begin navbar 
-
-		ul.navbar
-
-			li.navbar__item
-				a.navbar__link Item_1
-			li.navbar__item
-				a.navbar__link Item_2
-			li.navbar__item
-				a.navbar__link Item_3
-
-		// end navbar 
-
+	.header__left
+		.account
+			i.icon-user 
+			|Константин Петрович
+	.header__right
+		a.header__link(href="#")
+			i.icon-quest 
+			|Помощь
+		.lang
+			.lang__current
+				img.lang__flag(src="img/ru.png", alt="") 
+				|RU
+			ul.lang__list
+				//- li.lang__item
+				//- 	a.lang__link(href="")
+				//- 		img.lang__flag(src="img/ru.png", alt="") 
+				//- 		|RU
+				li.lang__item
+					a.lang__link(href="#")
+						img.lang__flag(src="img/en.png", alt="") 
+						|EN
 // end header 
