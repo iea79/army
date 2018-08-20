@@ -1,0 +1,73 @@
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	// overflow: hidden;
+	// text-align: right;
+	&__item {
+		// display: block;
+		margin-bottom: 20px;
+		&.active {
+			> .nav {
+				&__link {
+					font-weight: 700;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	&__link {
+		font-family: "Futura Futuris C";
+		font-weight: 400;
+		font-size: 18px;
+		color: $main_color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&Sub {
+		list-style: none;
+		padding: 0 0 0 10px;
+		margin: 13px 0;
+		&__item {
+			&.active {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					background-color: $color_info;
+					top: 0;
+					left: -50px;
+					right: 6px;
+					height: 100%;
+					transform: skewX(-22deg);
+				}
+				.navSub {
+					&__link {
+						position: relative;
+						color: $color_withe;
+						cursor: default;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		&__link {
+			color: $color_warning;
+			font-size: 14px;
+			font-family: "Arial";
+			text-decoration: none;
+			padding: 7px 10px 7px 0;
+			display: inline-block;
+			// font-weight: 600;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

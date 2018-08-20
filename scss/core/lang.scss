@@ -1,0 +1,41 @@
+$pm: 14px;
+.lang {
+	display: inline-block;
+	background-color: #f8f8f8;
+	padding: $pm 10px;
+	margin: -$pm 0;
+	position: relative;
+	&__current {
+		cursor: pointer;
+	}
+	&.open {
+		.lang__list {
+			display: block;
+		}
+	}
+	&__flag {
+		margin-right: 8px;
+		width: 23px;
+	}
+	&__list {
+		display: none;
+		background-color: #f8f8f8;
+		list-style: none;
+		padding: 16px 10px;
+		margin: 0;
+		width: 100%;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}
+	&__item {
+
+	}
+	&__link {
+		color: $main_color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

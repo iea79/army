@@ -1,0 +1,19 @@
+.footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 210px;
+	padding: 30px;
+	bottom: 15px;
+	color: $color_success;
+	font-size: 14px;
+	line-height: 1.4;
+	// height: $footer_height;
+	// background: #BFF08E;
+	@extend %clear_all;
+	.container_center {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}

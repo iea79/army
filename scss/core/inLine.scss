@@ -1,0 +1,82 @@
+.inLine {
+	&__item {
+		padding: 10px 0 40px;
+		border-bottom: 1px solid #ececec;
+		margin-bottom: 30px;
+		@extend %clear_a;
+	}
+	&__img {
+		float: left;
+		border: 1px solid #ececec;
+		margin-right: 41px;
+		width: 191px;
+		text-align: center;
+		img {
+			max-width: 96%;
+			max-height: 96%;
+			vertical-align: middle;
+		}
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 128px;
+			vertical-align: middle;
+		}
+	}
+	&__action {
+		float: right;
+	}
+	&__center {
+		overflow: hidden;
+		margin-top: -4px;
+	}
+	&__name {
+		font-family: "Futura Futuris C";
+		font-weight: 700;
+		line-height: 1.33;
+		font-size: 18px;
+		margin-bottom: 19px;
+	}
+	&__country {
+		font-size: 14px;
+		margin-bottom: 7px;
+	}
+	&__text {
+		font-size: 15px;
+		margin-bottom: 17px;
+		font-family: "Roboto";
+		font-weight: 300;
+		p {
+			margin: 8px 0;
+		}
+	}
+	&__label {
+
+		&Item {
+			font-size: 13px;
+			display: inline-block;
+			padding: 3px 11px 4px 21px;
+			border-radius: 12px;
+			background-color: #ececec;
+			position: relative;
+			margin-right: 9px;
+			vertical-align: top;
+			color: $color_primary;
+			text-decoration: none;
+			&:before {
+				content: '';
+				width: 7px;
+				height: 7px;
+				background-color: $color_withe;
+				border-radius: 7px;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+			}
+			&:hover {
+				background-color: lighten(#ececec, 3%);
+				color: lighten($color_primary, 6%);
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.alphabet {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@extend %clear_a;
+	> li {
+		float: left;
+		background-color: $color_withe;
+		margin-right: 1px;
+		margin-bottom: 1px;
+		> a {
+			color: $main_color;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			font-weight: 400;
+			width: 28px;
+			line-height: 28px;
+			text-align: center;
+		}
+	}
+}

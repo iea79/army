@@ -1,0 +1,26 @@
+.header {
+	// background-color: #ccc;
+	padding: 15px 31px 10px;
+	border-bottom: 1px solid #ececec;
+	font-size: 14px;
+	@extend %clear_a;
+	&__left {
+		float: left;
+	}
+	&__right {
+		float: right;
+	}
+	&__link {
+		color: $main_color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		[class*="icon-"] {
+			margin-right: 6px;
+		}
+	}
+	.lang {
+		margin-left: 37px;
+	}
+}

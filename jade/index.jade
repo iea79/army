@@ -4,10 +4,234 @@ block title
 	title Home
 
 block content
-	.container_center
-		|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		|tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		|quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		|consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		|cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		|proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	h1.page__title Каталог участников
+
+	.filters
+		.filters__left
+			.filters__item
+				select(data-placeholder="Страны")
+					option(value="")
+					option(value="Россия") Россия
+					option(value="США") США
+			.filters__item
+				select(data-placeholder="Регионы")
+					option(value="")
+					option(value="Регион 1") Регион 1
+					option(value="Регион 2") Регион 2
+			.filters__item
+				select(data-placeholder="Павильоны")
+					option(value="")
+					option(value="Павильон 1") Павильон 1
+					option(value="Павильон 2") Павильон 2
+			.filters__item
+				select(data-placeholder="Разделы")
+					option(value="")
+					option(value="Раздел 1") Раздел 1
+					option(value="Раздел 2") Раздел 2
+		.filters__right
+			.filters__search
+				input(type="search" placeholder="Поиск")
+			.filters__item
+				.filters__toggle Алфавит
+		.filters__drop
+			ul.alphabet
+				li
+					a(href="#") А
+				li
+					a(href="#") Б
+				li
+					a(href="#") В
+				li
+					a(href="#") Г
+				li
+					a(href="#") Д
+				li
+					a(href="#") Е
+				li
+					a(href="#") Ж
+				li
+					a(href="#") З
+				li
+					a(href="#") И
+				li
+					a(href="#") К
+				li
+					a(href="#") Л
+				li
+					a(href="#") М
+				li
+					a(href="#") Н
+				li
+					a(href="#") О
+				li
+					a(href="#") П
+				li
+					a(href="#") Р
+				li
+					a(href="#") С
+				li
+					a(href="#") Т
+				li
+					a(href="#") У
+				li
+					a(href="#") Ф
+				li
+					a(href="#") Ч
+				li
+					a(href="#") Ц
+				li
+					a(href="#") Ч
+				li
+					a(href="#") Ш
+				li
+					a(href="#") Щ
+				li
+					a(href="#") Э
+				li
+					a(href="#") Ю
+				li
+					a(href="#") Я
+			u.alphabet
+				li
+					a(href="#") A
+				li
+					a(href="#") B
+				li
+					a(href="#") C
+				li
+					a(href="#") D
+				li
+					a(href="#") E
+				li
+					a(href="#") F
+				li
+					a(href="#") G
+				li
+					a(href="#") H
+				li
+					a(href="#") I
+				li
+					a(href="#") J
+				li
+					a(href="#") K
+				li
+					a(href="#") L
+				li
+					a(href="#") M
+				li
+					a(href="#") N
+				li
+					a(href="#") O
+				li
+					a(href="#") P
+				li
+					a(href="#") Q
+				li
+					a(href="#") R
+				li
+					a(href="#") S
+				li
+					a(href="#") T
+				li
+					a(href="#") U
+				li
+					a(href="#") V
+				li
+					a(href="#") W
+				li
+					a(href="#") X
+				li
+					a(href="#") Y
+			ul.alphabet
+				li
+					a(href="#") 1
+				li
+					a(href="#") 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+				li
+					a(href="#") 5
+				li
+					a(href="#") 6
+				li
+					a(href="#") 7
+				li
+					a(href="#") 8
+				li
+					a(href="#") 9
+				li
+					a(href="#") 10
+	
+	.inLine
+		// Item 1
+		.inLine__item
+			.inLine__img
+				img(src="img/l1.png", alt="")
+			.inLine__action
+				button.btn.btn_check Запрос на встречу
+			.inLine__center
+				.inLine__name Вертолеты России
+				.inLine__country Россия \ Московская область
+				.inLine__text Зал: 8, стенд: 56373, раздел: Вертолетостроение
+				.inLine__label
+					a.inLine__labelItem(href="#") самолеты
+					a.inLine__labelItem(href="#") авиация
+		// Item 2
+		.inLine__item
+			.inLine__img
+				img(src="img/l2.png", alt="")
+			.inLine__action
+				button.btn.btn_check.btn_check_danger Запрос отправлен
+			.inLine__center
+				.inLine__name ООО «Высокие технологии и инновации»
+				.inLine__country Россия \ Московская область
+				.inLine__text Зал: 8, стенд: 56373, раздел: Вертолетостроение
+				.inLine__label
+					a.inLine__labelItem(href="#") самолеты
+					a.inLine__labelItem(href="#") авиация
+					a.inLine__labelItem(href="#") самолеты
+		// Item 3
+		.inLine__item
+			.inLine__img
+				img(src="img/l3.png", alt="")
+			.inLine__action
+				button.btn.btn_check Запрос на встречу
+			.inLine__center
+				.inLine__name Авиаремонтный завод № 405
+				.inLine__country Россия \ Московская область
+				.inLine__text Зал: 8, стенд: 56373, раздел: Вертолетостроение
+				.inLine__label
+					a.inLine__labelItem(href="#") самолеты
+		// Item 4
+		.inLine__item
+			.inLine__img
+				img(src="img/l4.png", alt="")
+			.inLine__action
+				button.btn.btn_check Запрос на встречу
+			.inLine__center
+				.inLine__name Научно-производственное предприятие «Авиасток»
+				.inLine__country Россия \ Московская область
+				.inLine__text Зал: 8, стенд: 56373, раздел: Вертолетостроение
+				.inLine__label
+					a.inLine__labelItem(href="#") самолеты
+					a.inLine__labelItem(href="#") авиация
+
+		// begin pagination 
+		.pagination__wrapper
+			ul.pagination
+				li
+					a(href="#").active 1
+				li
+					a(href="#") 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+			.pagination__action
+				button.btn.btn_warning Следующая 
+					i.icon-arrow-right
+		// end pagination 
+		
+

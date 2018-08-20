@@ -5,14 +5,21 @@
     <title>Home</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
   </head>
   <body>
     <aside class="aside">
       <div class="aside__wrapper"><a class="logo" href="/"><img src="img/logo.png" alt=""/></a>
         <nav class="nav_aside">
           <ul class="nav">
-            <li class="nav__item"><a class="nav__link" href="#">Профиль компании</a></li>
+            <li class="nav__item active"><a class="nav__link" href="#">Профиль компании</a>
+              <ul class="navSub">
+                <li class="navSub__item active"><a class="navSub__link" href="#">Карточка компании</a></li>
+                <li class="navSub__item"><a class="navSub__link" href="#">Контакты компании</a></li>
+                <li class="navSub__item"><a class="navSub__link" href="#">Мой диск</a></li>
+              </ul>
+            </li>
             <li class="nav__item"><a class="nav__link" href="#">Загрузки</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Формы</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Заказы</a></li>
@@ -46,19 +53,191 @@
       <!-- end header -->
       <!-- begin main__content-->
       <main class="main__content">
-        <div class="container_center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <h1 class="page__title">Каталог участников</h1>
+        <div class="filters">
+          <div class="filters__left">
+            <div class="filters__item">
+              <select data-placeholder="Страны">
+                <option value=""></option>
+                <option value="Россия">Россия</option>
+                <option value="США">США</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <select data-placeholder="Регионы">
+                <option value=""></option>
+                <option value="Регион 1">Регион 1</option>
+                <option value="Регион 2">Регион 2</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <select data-placeholder="Павильоны">
+                <option value=""></option>
+                <option value="Павильон 1">Павильон 1</option>
+                <option value="Павильон 2">Павильон 2</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <select data-placeholder="Разделы">
+                <option value=""></option>
+                <option value="Раздел 1">Раздел 1</option>
+                <option value="Раздел 2">Раздел 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters__right">
+            <div class="filters__search">
+              <input type="search" placeholder="Поиск"/>
+            </div>
+            <div class="filters__item">
+              <div class="filters__toggle">Алфавит</div>
+            </div>
+          </div>
+          <div class="filters__drop">
+            <ul class="alphabet">
+              <li><a href="#">А</a></li>
+              <li><a href="#">Б</a></li>
+              <li><a href="#">В</a></li>
+              <li><a href="#">Г</a></li>
+              <li><a href="#">Д</a></li>
+              <li><a href="#">Е</a></li>
+              <li><a href="#">Ж</a></li>
+              <li><a href="#">З</a></li>
+              <li><a href="#">И</a></li>
+              <li><a href="#">К</a></li>
+              <li><a href="#">Л</a></li>
+              <li><a href="#">М</a></li>
+              <li><a href="#">Н</a></li>
+              <li><a href="#">О</a></li>
+              <li><a href="#">П</a></li>
+              <li><a href="#">Р</a></li>
+              <li><a href="#">С</a></li>
+              <li><a href="#">Т</a></li>
+              <li><a href="#">У</a></li>
+              <li><a href="#">Ф</a></li>
+              <li><a href="#">Ч</a></li>
+              <li><a href="#">Ц</a></li>
+              <li><a href="#">Ч</a></li>
+              <li><a href="#">Ш</a></li>
+              <li><a href="#">Щ</a></li>
+              <li><a href="#">Э</a></li>
+              <li><a href="#">Ю</a></li>
+              <li><a href="#">Я</a></li>
+            </ul>
+            <u class="alphabet">
+              <li><a href="#">A</a></li>
+              <li><a href="#">B</a></li>
+              <li><a href="#">C</a></li>
+              <li><a href="#">D</a></li>
+              <li><a href="#">E</a></li>
+              <li><a href="#">F</a></li>
+              <li><a href="#">G</a></li>
+              <li><a href="#">H</a></li>
+              <li><a href="#">I</a></li>
+              <li><a href="#">J</a></li>
+              <li><a href="#">K</a></li>
+              <li><a href="#">L</a></li>
+              <li><a href="#">M</a></li>
+              <li><a href="#">N</a></li>
+              <li><a href="#">O</a></li>
+              <li><a href="#">P</a></li>
+              <li><a href="#">Q</a></li>
+              <li><a href="#">R</a></li>
+              <li><a href="#">S</a></li>
+              <li><a href="#">T</a></li>
+              <li><a href="#">U</a></li>
+              <li><a href="#">V</a></li>
+              <li><a href="#">W</a></li>
+              <li><a href="#">X</a></li>
+              <li><a href="#">Y</a></li>
+            </u>
+            <ul class="alphabet">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="inLine">
+          <!-- Item 1-->
+          <div class="inLine__item">
+            <div class="inLine__img"><img src="img/l1.png" alt=""/></div>
+            <div class="inLine__action">
+              <button class="btn btn_check">Запрос на встречу</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name">Вертолеты России</div>
+              <div class="inLine__country">Россия \ Московская область</div>
+              <div class="inLine__text">Зал: 8, стенд: 56373, раздел: Вертолетостроение</div>
+              <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a><a class="inLine__labelItem" href="#">авиация</a></div>
+            </div>
+          </div>
+          <!-- Item 2-->
+          <div class="inLine__item">
+            <div class="inLine__img"><img src="img/l2.png" alt=""/></div>
+            <div class="inLine__action">
+              <button class="btn btn_check btn_check_danger">Запрос отправлен</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name">ООО «Высокие технологии и инновации»</div>
+              <div class="inLine__country">Россия \ Московская область</div>
+              <div class="inLine__text">Зал: 8, стенд: 56373, раздел: Вертолетостроение</div>
+              <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a><a class="inLine__labelItem" href="#">авиация</a><a class="inLine__labelItem" href="#">самолеты</a></div>
+            </div>
+          </div>
+          <!-- Item 3-->
+          <div class="inLine__item">
+            <div class="inLine__img"><img src="img/l3.png" alt=""/></div>
+            <div class="inLine__action">
+              <button class="btn btn_check">Запрос на встречу</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name">Авиаремонтный завод № 405</div>
+              <div class="inLine__country">Россия \ Московская область</div>
+              <div class="inLine__text">Зал: 8, стенд: 56373, раздел: Вертолетостроение</div>
+              <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a></div>
+            </div>
+          </div>
+          <!-- Item 4-->
+          <div class="inLine__item">
+            <div class="inLine__img"><img src="img/l4.png" alt=""/></div>
+            <div class="inLine__action">
+              <button class="btn btn_check">Запрос на встречу</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name">Научно-производственное предприятие «Авиасток»</div>
+              <div class="inLine__country">Россия \ Московская область</div>
+              <div class="inLine__text">Зал: 8, стенд: 56373, раздел: Вертолетостроение</div>
+              <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a><a class="inLine__labelItem" href="#">авиация</a></div>
+            </div>
+          </div>
+          <!-- begin pagination -->
+          <div class="pagination__wrapper">
+            <ul class="pagination">
+              <li><a class="active" href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+            <div class="pagination__action">
+              <button class="btn btn_warning">Следующая <i class="icon-arrow-right"></i></button>
+            </div>
+          </div>
+          <!-- end pagination -->
         </div>
       </main>
       <!-- end main__content -->
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="js/function.js"></script>
   </body>
 </html>

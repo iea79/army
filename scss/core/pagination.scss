@@ -1,0 +1,68 @@
+.pagination {
+	margin: 0;
+	padding: 0;
+	letter-spacing: -1px;
+	font-size: 0;
+	float: left;
+	&__wrapper {
+		margin: 40px 0;
+		@extend %clear_a;
+	}
+	&__action {
+		float: right;
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+		min-width: 40px;
+		margin-right: 2px;
+		letter-spacing: initial;
+		font-size: initial;
+		a {
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			text-align: center;
+			background-color: #ececec;
+			font-size: 14px;
+			text-decoration: none;
+			color: $color_warning;
+			&:hover,&.active {
+				color: $color_withe;
+				font-weight: 600;
+			}
+			&:hover {
+				background-color: lighten($color_info, 19%);
+			}
+			&.active {
+				background-color: $color_info;
+				cursor: default;
+				&:hover {
+					background-color: $color_info;
+				}				
+			}
+		}
+		&.prev, &.next {
+			a {
+				&:before {					
+				}
+			}
+		}
+		&.prev {
+			a {
+				&:before {
+					content: '<';
+					
+				}
+			}
+		}
+		&.next {
+			a {
+				&:before {
+					content: '>';
+					
+				}
+			}
+		}
+	}
+}

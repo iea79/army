@@ -1,0 +1,32 @@
+[class*="icon-"] {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.icon {
+	&-attention {
+		&:before {
+			content: url('../img/attention.png');
+		}
+	}
+	&-user {
+		&:before {
+			content: url('../img/user.png');
+		}
+	}
+	&-quest {
+		&:before {
+			content: url('../img/question-mark.png');
+		}
+	}
+	&-quest-lg {
+		&:before {
+			content: url('../img/question-mark-lg.png');
+		}
+	}
+	&-arrow-right {
+		&:before {
+			content: url('../img/next.png');
+		}
+	}
+}

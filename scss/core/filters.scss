@@ -1,0 +1,136 @@
+.filters {
+	position: relative;
+	margin-bottom: 28px;
+	&:before {
+		content: '';
+		position: absolute;
+		left: -29px;
+		right: -29px;
+		top: 0;
+		height: 50px;
+		background-color: #f8f8f8;
+		z-index: -1;
+	}
+	@extend %clear_a;
+	&__left {
+		float: left;
+		@extend %clear_a;
+		.filters__item {
+			&:first-child {
+				// padding-left: 0;
+			}
+		}
+	}
+	&__item {
+		float: left;
+	}
+	&__toggle {
+		font-size: 14px;
+		padding: 16px 40px 18px 16px;
+		background: url('../img/down-arrow.png') no-repeat right 19px top 22px;
+		transition: all .3s;
+		cursor: pointer;
+		&.active {
+			font-weight: 700;
+			background: #ececec url('../img/up-arrow.png') no-repeat right 19px top 22px;
+		}
+	}
+	&__drop {
+		// display: none;
+		background-color: #ececec;
+		// position: absolute;
+		// top: 50px;
+		// left: 0;
+		width: 100%;
+		padding: 0 21px;
+		height: 0;
+		overflow: hidden;
+		transition: all .3s;
+		&.open {
+			height: auto;
+			padding: 21px;
+		}
+	}
+	&__right {
+		float: right;
+		@extend %clear_a;
+		.filters__item {
+			&:last-child {
+				// padding-left: 0;
+			}
+		}
+	}
+	&__search {
+		position: relative;
+		float: left;
+		margin: 10px 12px;
+		&:before {
+			content: url('../img/searcher.png');
+			position: absolute;
+			top: 6px;
+			right: 7px;
+		}
+		input {
+			border-color: #fff;
+			border-radius: 0;
+			// font-size: 14px;
+			width: 160px;
+		}
+	}
+	.select2 {
+		&-container {
+			display: inline-block;
+			margin-right: 20px;
+			width: auto !important;
+			&--default {
+				.select2 {
+					&-results {
+						&__options {
+											
+						}
+						&__option {
+							&--highlighted[aria-selected] {
+	
+							}
+						}
+					}
+					&-dropdown {
+						&--below {
+							
+						}
+						&--above {
+							
+						}
+					}
+					&-selection {
+						&--single {
+							border: none;
+							background-color: transparent;
+							height: auto;
+							outline: 0;
+							.select2 {
+								&-selection {
+									&__rendered {
+										color: $main_color;
+										font-size: 14px;
+										text-overflow: initial;
+										padding-left: 0;
+										height: auto;
+										padding-right: 24px;
+										padding: 10px 24px 10px 0;
+										outline: 0;
+									}
+									&__placeholder {
+										color: $main_color;
+									}
+									&__arrow {
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+body {
+    min-width: 1300px;
+	
+}
+
+.wrapper {
+	font-size: $main_font_size;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    padding-left: 330px;
+}
+
+.container_center {
+	max-width: $container_width;
+	min-width: $container_width;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main__content {
+	padding: 30px 29px;
+	@extend %clear_a;
+}
+
+

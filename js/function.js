@@ -79,6 +79,21 @@ $(document).ready(function() {
    	$('.lang').on('mouseleave', function() {
    		$(this).removeClass('open');
    	});
+
+   	$('.filters__toggle').on('click', function(event) {
+   		event.preventDefault();
+   		$(this).toggleClass('active');
+   		$('.filters__drop').toggleClass('open');
+   	});
+
+   	$('select').each(function(index, el) {
+   		$(this).select2({
+	   		placeholder: $(this).data('placeholder'),
+		    // allowClear: true,
+		    minimumResultsForSearch: 15
+	   	});
+   	});
+
 });
 
 $(window).resize(function(event) {

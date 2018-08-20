@@ -1,0 +1,69 @@
+.select2 {
+	&-container {
+		&--open {
+			.select2 {
+				&-selection {
+					&__rendered {
+						
+					}
+					&__placeholder {
+						
+					}
+					&__arrow {
+						background: url('../img/up-arrow.png') no-repeat center !important;
+					}
+				}
+			}
+		}
+		&--default {
+			.select2 {
+				&-results {
+					&__options {
+					}
+					&__option {
+						padding: 10px;				
+						&--highlighted[aria-selected] {
+							background-color: $color_info;
+						}
+					}
+				}
+				&-dropdown {
+					width: auto !important;
+					white-space: nowrap;
+					background-color: #ececec;
+					font-size: 14px;
+					border-color: $color_info;
+					border-radius: 0;
+					&--below {
+						
+					}
+					&--above {
+						
+					}
+				}
+				&-selection {
+					&--single {
+						
+						.select2 {
+							&-selection {
+								&__rendered {
+									
+								}
+								&__placeholder {
+									
+								}
+								&__arrow {
+									background: url('../img/down-arrow.png') no-repeat center;
+									height: 100%;
+									b {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
