@@ -1,0 +1,38 @@
+.notice{
+	font-size: 14px;
+	margin-top: 30px;
+	margin-bottom: 37px;
+	&__item{
+		@extend %clear_a;
+		padding-bottom: 10px;
+	}
+	&__date{
+		padding-top: 3px;
+		display: inline-block;
+		padding-right: 7px;
+		float: left;
+		color: $color_success;
+	}
+	&__icon{
+		float: left;
+		.fa{
+			font-size: 19px;
+			color: $light_red;
+			padding-right: 7px;
+		}
+	}
+	&__text{
+		padding-top: 3px;
+	}
+		
+	&__link{
+		color: $color_warning;
+		padding-top: 10px;
+		display: inline-block;
+		text-decoration: none;
+		margin-bottom: 10px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

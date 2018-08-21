@@ -1,0 +1,118 @@
+extends template.jade
+
+block title
+	title Home
+
+block content
+
+	h1.page__title Личный кабинет экспонента
+
+	.home__wrapbtn
+		.home__wrapbtn_btn
+			a(href='#' download).btn.btn_down Загрузить справочник экспонента
+				span.home__wrapbtn_img
+					img(src="img/home/download.png") 	
+
+	.page__titleSecond Уведомления
+
+	.notice
+		.notice__item 
+			.notice__date 03.05.18 
+			.notice__icon
+				<i class="fa fa-exclamation-circle" aria-hidden="true"></i>					
+			.notice__text Запрос на встречу
+
+		.notice__item 
+			.notice__date 03.05.18 
+			.notice__icon
+				<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+			.notice__text Заканчивается срок подачи заявок на проведение собственных мероприятий в рамках деловой программы
+		.notice__item 
+			.notice__date 03.05.18
+			.notice__icon
+				<i class="fa fa-exclamation-circle" aria-hidden="true"></i> 
+			.notice__text Заканчивается срок подачи информации в печатный каталог
+
+		a(href='#').notice__link Показать еще
+	
+	.grid.grid__3 
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon1.png") 
+				.plate__content
+					.plateCaption Профиль
+					.plateText Подтвердить реквизиты.
+						div Редактировать информацию о компании
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon2.png")
+				.plate__content
+					.plateCaption Загрузки
+					.plateText Загрузить справочник экспонента и другие документы организатора
+				
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon3.png")
+				.plate__content
+					.plateCaption Формы
+					.plateText Подача форм: информация в каталог, бейджи, автопропуска, заказ услуг
+				
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon4.png")
+				.plate__content
+					.plateCaption Заказы
+					.plateText Ваши запросы и заказы. 
+						div Проверка договоров, размещение новых заказов
+
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon5.png")
+				.plate__content
+					.plateCaption Подрядчики
+					.plateText Регистрируйте и управляйте сторонними поставщиками, обслуживающими вас
+
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon6.png")
+				.plate__content
+					.plateCaption Пропуска
+					.plateText Загрузить справочник экспонента и другие документы организатора
+				
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon7.png")
+				.plate__content
+					.plateCaption Запросы на встречи
+					.plateText Ваши запросы и заказы. Проверка договоров, размещение новых заказов
+				
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon8.png")
+				.plate__content
+					.plateCaption Планировщик
+					.plateText Подача форм: информация в каталог, бейджи, автопропуска, заказ услуг
+				
+		div
+			a(href='#').plate
+				.plate__icon 
+					img(src="img/home/block_icon9.png")
+				.plate__content
+					.plateCaption Мой диск
+					.plateText Регистрируйте и управляйте сторонними поставщиками, обслуживающими вас
+
+	.home__help
+		.home__help__img
+			img(src="img/home/img_help.png") 
+		.home__help__content
+			.plateCaption Помощь
+			.home__help__content__text Загрузить справочник экспонента и другие документы организатора
+

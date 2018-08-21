@@ -1,0 +1,32 @@
+.plate{
+	display: block;
+	transition: all .5s;
+	border: 1px solid $white_smoke;
+	padding: 20px 30px 28px 30px;
+	text-decoration: none;
+	@extend %clear_a;
+	&__content{
+		overflow: hidden;
+		padding-right: 18px;
+	}
+	&Caption{
+		color: $color_warning;
+		font-family: $font_caption;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&Text{
+		padding-top: 10px;
+		color: $color_success;
+		font-family: $main_font_family;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 18px;
+	}
+	&__icon{
+		float: right;
+	}
+	&:hover{
+		background-color: $pale_red;
+	}
+}
