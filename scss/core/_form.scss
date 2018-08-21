@@ -128,31 +128,34 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 // Style for button and pseudo button for input and link
 .btn {
-	color: $btn_default_text_color;
+	color: $color_warning;
 	font-family: $main_font_family;
 	font-size: 14px;
 	font-weight: 700;
-	padding: 12px 17px 13px;
+	padding: 11px 15px 12px;
 	border: none;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
-	background-color: $btn_default_bg_color;
+	background-color: $color_withe;
+	border: 1px solid $btn_default_border_color;
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 0;
-	transition: all .3s;
-	&:hover {
-		background-color: lighten($btn_default_bg_color, 20%);
+	@include trs(0.3s);		
+	&_icon{
+		color: $color_info;
+		padding-right: 5px;
 	}
-	@each $status_el, $color_bg in $el_colors {
-		&_#{$status_el} {
-			background-color: $color_bg;
-			color: $btn_contrast_text_color;
-			&:hover {
-				background-color: lighten($color_bg, 20%);
-			}
+	&_send{
+		background-color: $burgundy;
+		color: $color_withe;
+		border: none;
+		font-family: "Arial";
+		font-size: 14px;
+		font-weight: 400;
+		&:after{
+			background-image: url(/img/helptheme_send.png);
 		}
 	}
 	&_check {
@@ -174,5 +177,8 @@ input[type=checkbox]:disabled:indeterminate:before {
 				// background-color: #f8f8f8;
 			}
 		}
+	}
+	&_down{
+		padding-left: 38px;
 	}
 }
