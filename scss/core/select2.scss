@@ -67,3 +67,50 @@
 		}
 	}
 }
+
+.js_multiplecheckwrap{
+	.select2-container--default .select2-selection--multiple {
+	    border: none;
+	    border-bottom: 1px solid #aaa;
+	    border-radius: 0;
+	    cursor: pointer !important;
+	    width: 520px;
+	    overflow-y: auto;
+	}
+	.select2-search__field{
+		display: none;
+	}
+	.select2-selection__rendered{
+		padding: 0 !important;
+	}
+	.select2-search.select2-search--inline{
+		position: relative;
+		display: inline-block;
+	}
+	.select2-selection.select2-selection--multiple{
+		&:before{
+			position: relative;
+			content: "Тематический раздел";
+			left: 0;
+			top: 8px;
+			font-family: $main_font_family;
+			font-weight: 700;
+			font-size: 14px !important;
+			color: $main_color;
+		}
+		&:after{
+	    	position: absolute;
+			content: "\f107";
+			font: normal normal normal 18px/1 FontAwesome;
+			display: inline-block;
+			transition: all .4s;
+			left: 160px;
+			top: 8px;
+			color: $color_warning;
+	    }
+	}
+	.select2-container .select2-selection--multiple .select2-selection__rendered {
+	    white-space: normal;
+        margin-top: 15px;
+	}
+}

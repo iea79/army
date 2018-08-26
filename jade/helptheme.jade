@@ -1,0 +1,61 @@
+extends template.jade
+
+block title
+	title Проблема
+
+block content
+	
+	a(href="home.html").returning 
+		<i class="fa fa-reply returning__icon" aria-hidden="true"></i> Вернуться в программу
+	
+	h1.page__title Помогите решить проблему
+		
+	.helptheme__details
+
+		.helptheme__details_date 29.01.2018 18:54	
+
+		.helptheme__details_text Открыто
+
+		.helptheme__details_act 
+			<i class="fa fa-times" aria-hidden="true"></i> Закрыть обращение
+
+	.helptheme__messages
+
+		.helptheme__messages_block
+			.helptheme__messages_block_caption Тестовая компания
+
+			.helptheme__details_date.helptheme__messages_block_date 29.01.2018 23:45
+
+			.helptheme__messages_block_text Бурное развитие внутреннего туризма привело Томаса Кука к необходимости организовать поездки за границу, при этом растительный покров выбирает глубокий Дом-музей Риддера Шмидта. Винный фестиваль проходит в приусадебном музее Георгикон, там же денежная единица надкусывает языковой архипелаг. Королевство многопланово связывает традиционный эфемероид.
+
+			.helptheme__messages_block_img  
+				img(src="img/helptheme/helptheme_img.png")
+
+		.helptheme__messages_block
+			.helptheme__messages_block_caption Дмитрий
+
+			.helptheme__details_date.helptheme__messages_block_date 29.01.2018 23:45
+
+			.helptheme__messages_block_text Винный фестиваль проходит в приусадебном музее Георгикон,
+
+		.helptheme__messages_block
+			.helptheme__messages_block_caption Смирнов Дмитрий
+
+			.helptheme__details_date.helptheme__messages_block_date 29.01.2018 23:45
+
+			.helptheme__messages_block_text Винный фестиваль проходит в приусадебном музее
+
+		form.helptheme__messagesForm
+
+			.helptheme__messagesItem.helptheme__messagesItem_left
+				.form__label Сообщение
+				textarea
+				.helptheme__action
+					button.btn.btn_send Отправить
+
+			.helptheme__messagesItem.helptheme__messagesItem_right
+				.form__label Приложить файл
+				.form__upload
+					input(type='file' name='agreement' id="upload")
+					label.form__uploadBtn(for="upload") Выберите файл
+

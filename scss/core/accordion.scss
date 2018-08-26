@@ -1,0 +1,68 @@
+.accordion {
+	display: block;
+	width: 100%;
+	&Label{
+		cursor: default !important;
+	}
+	&__item {
+		margin-bottom: 0;
+	}
+	&__toggle {
+		cursor: pointer;
+		display: block;
+		width: 100%;
+		padding: 15px 0 15px 0;
+		color: $main_color;
+		position: relative;
+		border-top: 1px solid $color_info;
+		&:after {
+			position: absolute;
+			content: "\f107";
+			font: normal normal normal 14px/1 FontAwesome;
+			display: inline-block;
+			font-size: 18px;
+			transition: all .4s;
+			right: -20px;
+			top: 17px;
+			color: $color_warning;
+		}
+		&.active {
+			background-color: $white_smoke;
+			color: $main_color;
+			opacity: 1;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 25px;
+			border: none;
+			&:after {
+				content: "\f106";
+			}
+		}
+	}
+	&__content{
+		transition: all .3s;
+		height: 0;
+		overflow: hidden;
+		font-weight: 400;
+		line-height: 25px;
+		background-color: $white_smoke;
+		padding: 0;
+		&.open {
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&__check{
+		padding-bottom: 10px;
+		label{
+			color: $main_color !important;
+			display: inline-block !important;
+			padding-left: 5px;
+			font-family: "Arial";
+			font-size: 14px  !important;
+			font-style: normal !important;
+		}
+	}
+}

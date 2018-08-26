@@ -24,7 +24,7 @@
 	}
 	>div {
 		padding-left: $grid_padding;
-		margin-bottom: $grid_padding;
+		margin-bottom: 15px;
 		&.width {
 			&_1 {
 				width: 50%;
@@ -46,6 +46,21 @@
 			}
 			&_3_4 {
 				width: 75%;
+			}
+			&_25 {
+				width: 25%;
+			}
+			&_40 {
+				width: 40%;
+			}
+			&_80 {
+				width: 80%;
+			}
+			&_60 {
+				width: 60%;
+			}
+			&_100 {
+				width: 100%;
 			}
 		}
 	}

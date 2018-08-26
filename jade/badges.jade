@@ -1,0 +1,96 @@
+extends template.jade
+
+block title
+	title Карточка компании
+
+block content
+
+	h1.page__title Бейджи
+
+	.accordion
+		.accordion__item
+			.accordion__toggle 
+				.page__titleSecond Бейдж №1
+			.accordion__content 
+				form.form.grid
+					.form__field.width_3
+						span Фамилия на русском
+							input(type='text')
+
+					.form__field.width_3
+						span Имя на русском
+							input(type='text')
+
+					.form__field.width_3
+						span Отчество
+							input(type='text')
+
+					.form__field.width_3
+						span Фамилия на английском
+							input(type='text')
+
+					.form__field.width_3
+						span Имя на английском
+							input(type='text')
+
+					.form__field.width_3
+
+
+					.form__field.width_3
+						select(data-placeholder="Страна").width_3
+							option(value="")
+							option(value="Раздел 1") Австралия
+							option(value="Раздел 2") Аргентина
+							option(value="Раздел 3") Босния и Герцеговина
+							option(value="Раздел 4") Великобритания
+							option(value="Раздел 5") Нидерланды
+							option(value="Раздел 6") ОАЭ
+							option(value="Раздел 7") Норвегия
+							option(value="Раздел 8") США
+							option(value="Раздел 8") Финляндия
+
+					.form__field.width_3
+						select(data-placeholder="Область").width_3
+							option(value="")
+							option(value="Раздел 1") 1
+							option(value="Раздел 2") 2
+
+					.form__field.width_3
+						select(data-placeholder="Город").width_3
+							option(value="")
+							option(value="Раздел 1") 1
+							option(value="Раздел 2") 2
+
+					.form__field.width_3
+						select(data-placeholder="Гражданство").width_3
+							option(value="")
+							option(value="Раздел 1") 1
+							option(value="Раздел 2") 2
+
+					.form__field.width_2_3
+
+					.form__field.width_3
+						span Место работы, организация
+							input(type='text')
+
+					.form__field.width_3
+						span Должность
+							input(type='text')
+
+					.form__field.width_3
+
+					.form__field.width_3
+						span Телефон 
+							input(type='text')
+
+					.form__field.width_3
+						span E-mail 
+							input(type='text')
+
+					.form__field.width_3
+
+					.form__field.width_3
+						select(data-placeholder="Категория бейджа").width_3
+							option(value="")
+							option(value="Раздел 1") 1
+							option(value="Раздел 2") 2
