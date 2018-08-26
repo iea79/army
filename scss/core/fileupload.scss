@@ -1,0 +1,30 @@
+.fileupload {
+	display: inline-block;
+    width: 144px;
+    height: 40px;
+    background: $white_smoke;
+    border-radius: 3px;
+    padding: 8px 4px;
+    text-align: center;
+	color: $color_warning;
+	font-size: 14px;
+	font-weight: 400;
+	transition: all .5s;	
+    &:hover{
+    	background-color: $color_info;
+    }
+    input[type="file"]{
+	    display: none;
+	}
+	span {
+		color: $color_warning;
+	    width: 100%;
+	    text-align: center;
+	    height: 100%;
+	    cursor: pointer;
+	}
+}
+.filename{
+	display: inline-block;
+	margin-left: 15px;
+}

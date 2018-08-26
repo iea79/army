@@ -9,27 +9,28 @@ input[type=tel],
 input[type=number],
 input[type=datetime], 
 textarea {
-	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
 	padding: 6px 15px;
 	outline: none;
-	font-size: 14px;
 	font-weight: 400;
 	font-family: $main_font_family;
-	border-radius: 5px;
+	color: $main_color;
+	font-size: 14px;
+	border: none;
+	border-bottom: 1px solid $color_info;
+	width: 100%;
 	transition: all .3s;
+	background-color: transparent;
 	&:hover {
 	}
 	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
 		@include placeholder {
-			color: red;
+			opacity: 0;
+			text-indent: 0;
 		}
 	}
 	&.invalid {
 		background-color: #fff0f0;
-		border: 1px solid red;
+		// border: 1px solid red;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
@@ -61,17 +62,20 @@ input[type=radio]:not(:disabled) {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
+    height: 18px;
+    width: 18px;
     overflow: hidden;
     margin-top: -4px;
     vertical-align: middle;
-    -webkit-appearance: none;
+    -moz-webkit-appearance: none;
     outline: 0;
     background: 0 0;
     text-align: center;
     position: relative;
+    border-radius: 3px;
+    background-color: $color_withe;
+	border: 2px solid #929496;
+
 }
 
 input[type=radio] {
@@ -99,12 +103,16 @@ input[type=radio]:checked:before {
 
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
-    font-size: 12px;
-    -webkit-font-smoothing: antialiased;
+    content: "\f00c";
+    font: normal normal normal 12px/1 FontAwesome;
     text-align: center;
-    line-height: 13px;
-    color: #000;
+    line-height: 18px;
+    color: #fff;
+    background-color: $color_danger;
+}
+input[type=checkbox]:checked{
+	border: none;
+	padding: 0;
 }
 
 input[type=checkbox]:indeterminate:before {
@@ -150,12 +158,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 	&_send{
 		background-color: $burgundy;
 		color: $color_withe;
-		border: none;
+		border-color: $burgundy;
 		font-family: "Arial";
-		font-size: 14px;
 		font-weight: 400;
-		&:after{
-			background-image: url(/img/helptheme_send.png);
+
+		padding-left: 35px;
+		background-image: url('../img/send.png');
+		background-repeat: no-repeat;
+		background-position: left 10px center;
+		&:hover {
+			background-color: lighten($burgundy, 10%);
+			border-color: lighten($burgundy, 10%);
 		}
 	}
 	&_check {

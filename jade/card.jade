@@ -1,0 +1,137 @@
+extends template.jade
+
+block title
+	title Карточка компании
+
+block content
+
+	h1.page__title Карточка компании
+
+	table(cellpadding="0", cellspacing="0", border="0").cardTable
+		thead.cardTable__thead
+			tr
+				th Наименование
+				th.cardTable_left Цена
+				th 
+		tbody.cardTable__tbody
+			tr
+				td Логотип одноцветный (до 1 кв.м)
+				td.cardTable_left 260.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Оклейка полноцветной печатью пленкой ORACAL с печатью на самоклеющейся пленке
+				td.cardTable_left 5 320.00 
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Полноцветная печать на баннерной ткани с монтажом на закладных
+				td.cardTable_left 3 130.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Блок розеток (3 разъёма), 220 V, 1 кВт
+				td.cardTable_left 990.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Блок розеток (3 разъёма), 220 V, 2,5 кВт
+				td.cardTable_left 9 030.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Бутыль с водой (19 л) (выдается под залог)
+				td.cardTable_left 3 130.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+			tr
+				td Вешалка напольная
+				td.cardTable_left 15 372.00
+				td 
+					a(href='#') <i class="fa fa-plus" aria-hidden="true"></i>Заказать
+
+	.page__titleSecond Для печатного каталога
+
+	form.form.grid
+		.form__field.width_3_4
+			span Организация
+				input(id='check1', type='text')
+				label(for='check1') Название организации, с которой заключен договор
+
+		.form__field.width_4
+			span Номер договора
+				input(id='check2', type='text')
+				label(for='check2') Номер договора, как в договоре
+
+
+		.form__field
+			span Название организации для русского алфавитного списка
+				input(id='check3', type='text')
+				label(for='check3') Образец заполнения: МКВ, ООО
+
+
+		.form__field
+			span Название организации для английского алфавитного списка
+				input(id='check4', type='text')
+				label(for='check4') Образец заполнения: ICE, Ltd.
+
+
+		.form__field.width_5
+			span Индекс
+				input(id='check5', type='text')
+				label(for='check5') Индекс
+
+
+		.form__field.width_40
+			span Страна
+				input(id='check6', type='text')
+				label(for='check6') Выберите страну	
+
+
+		.form__field.width_40
+			span Регион
+				input(id='check7', type='text')
+				label(for='check7') Выберите регион	
+
+
+		.form__field
+			span Описание организации на русском языке
+				input(id='check8', type='text')
+				label(for='check8') Образец заполнения: ICE, Ltd.
+
+
+		.form__field
+			span Описание организации на английском языке
+				input(id='check9', type='text')
+				label(for='check9') Образец заполнения: ICE, Ltd.
+
+
+		.form__logo
+			.form__logoCaption Логотип
+			.fileupload
+				label
+					input(type='file', name='file')
+					span Выбрать файл
+			span(id='filename', type='text', class="filename", placeholder='IMG_8177')
+			label Загрузите логотип
+
+		.form__select.width_100.js_multiplecheckwrap
+			select(data-placeholder="Тематический раздел", class="js-example-basic-single js_multiplecheck", multiple="multiple", id="select")
+				option(value="")
+				option(value="Раздел 1", type='checkbox') Вооружение и техника Военно-морского Флота
+				option(value="Раздел 2") Ракетно-космические комплексы. Аэрокосмические технологии. Космические исследования в интересах Вооруженных Сил
+				option(value="Раздел 3") Вооружение и техника Воздушно-космических сил
+				option(value="Раздел 4") Беспилотные летательные аппараты и комплексы. Робототехнические комплексы
+				option(value="Раздел 5") Стрелковое оружие и средства  ближнего боя
+				option(value="Раздел 6") Экипировка и обмундирование военнослужащих
+				option(value="Раздел 7") Боеприпасы всех видов и родов войск
+				option(value="Раздел 8") Оптика. Оптико-электронное оборудование и системы
+				option(value="Раздел 9") Нелетальное оружие
+				option(value="Раздел 10") Вооружение и средства РХБ защиты
+				option(value="Раздел 11") Средства индивидуальной и  коллективной защиты
+				option(value="Раздел 12") Техника и оборудование
+				
+			label.accordionLabel Выберите тематический раздел
+
+		.form__button
+			button Сохранить
