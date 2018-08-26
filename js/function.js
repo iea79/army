@@ -94,7 +94,61 @@ $(document).ready(function() {
 	   	});
    	});
 
+
+    // accordion
+      $('.accordion__toggle').on('click', function() {
+
+          // Создаем переменную для отдельного блока внутри которого находится переключаетель и скрытый текст
+          // Для выбора элемента по которому кликнули используя $(this) (просто не забываем что их может быть много на странице)
+          var item = $(this).closest('.accordion__item');
+          // внутри item ищем скрываемый текст (написал просто для понимания что можно так использовать переменные)
+          var content = item.find('.accordion__content');
+
+
+          // Убираем класс active у всех переключателей
+          $('.accordion__toggle').not($(this)).removeClass('active');
+
+          // Убираем класс open у всех скрываемых контентов
+          $('.accordion__content').removeClass('open');
+
+          // У переключателя проверям наличие класса active
+          if ($(this).hasClass('active')) {
+              // Если класс active присутствует, а значит accordion__content виден, то
+              // Удаляем у нажатого элемента класс active
+              $(this).removeClass('active');
+              // у accordion__content убираем класс open (скрываем контент)
+              content.removeClass('open');
+          } else {
+              // Если у нажатого элемента нет класса active
+              // у элементу по которому кликнули добавляем класс active
+              $(this).addClass('active');
+              // для accordion__content добавляем класс open (показываем контент)
+              content.addClass('open');
+          }
+      });
+
+      $(".fileupload input[type=file]").change(function(){
+           var filename = $(this).val().replace(/.*\\/, "");
+           $("#filename").text(filename);
+      });
+
+      $('.js_multiplecheck').select2({
+        closeOnSelect: false
+      })
+
+      $('.js_multiplecheck').on('select2:open', function() {
+        var container = $('.select2-container').last();
+        var wrap = $(this).closest('.js_multiplecheckwrap');
+        container.addClass('js_select');
+        console.log('open');
+        
+        container.appendTo(wrap);
+      });
+
 });
+    // accordion
+
+// });
 
 $(window).resize(function(event) {
 	checkOnResize()

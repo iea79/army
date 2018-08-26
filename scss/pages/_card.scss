@@ -142,3 +142,31 @@
 	}
 }
 
+.js_multiplecheckwrap {
+	.select2-container--default .select2-selection--multiple .select2-selection__choice {
+		border: none;
+		background-color: transparent;
+		color: #111;
+		font-size: 14px;
+		padding-left: 0;
+		display: inline;
+		&:after {
+			content: ',';
+			
+		}
+		&:last-child {
+			
+		}
+		&:last-child,&:nth-last-child(2) {
+			&:after {
+				content: '';
+			}
+		}
+		&:nth-child(n+2) {
+		}
+	}
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+		display: none;
+	}
+}
+
