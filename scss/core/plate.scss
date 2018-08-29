@@ -5,6 +5,7 @@
 	padding: 20px 30px 28px 30px;
 	text-decoration: none;
 	@extend %clear_a;
+	min-height: 135px;
 	&__content{
 		overflow: hidden;
 		padding-right: 18px;

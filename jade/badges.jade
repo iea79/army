@@ -1,96 +1,472 @@
 extends template.jade
-
 block title
 	title Карточка компании
-
 block content
-
 	h1.page__title Бейджи
+	.badges
+		.accordion
 
-	.accordion
-		.accordion__item
-			.accordion__toggle 
-				.page__titleSecond Бейдж №1
-			.accordion__content 
-				form.form.grid
-					.form__field.width_3
-						span Фамилия на русском
-							input(type='text')
+			.accordion__item.open
+				.accordion__toggle 
+					.accordion__toggle_name Бейдж №1
+					.accordion__toggle_icon
+				.accordion__content 
+					form.form.grid.grid__3
 
-					.form__field.width_3
-						span Имя на русском
-							input(type='text')
+						.form__field
+							label(for='surname') Фамилия на русском
+							input(type='text', id='surname')
 
-					.form__field.width_3
-						span Отчество
-							input(type='text')
+						.form__field
+							label(for='name') Имя на русском
+							input(type='text', id='name')
 
-					.form__field.width_3
-						span Фамилия на английском
-							input(type='text')
+						.form__field
+							label(for='patronymic') Отчество
+							input(type='text', id='patronymic')
 
-					.form__field.width_3
-						span Имя на английском
-							input(type='text')
+						.form__field
+							label(for='surname_en') Фамилия на английском
+							input(type='text', id='surname_en')
 
-					.form__field.width_3
+						.form__field
+							label(for='name_en') Имя на английском
+							input(type='text', id='name_en')
+
+						.form__field
 
 
-					.form__field.width_3
-						select(data-placeholder="Страна").width_3
-							option(value="")
-							option(value="Раздел 1") Австралия
-							option(value="Раздел 2") Аргентина
-							option(value="Раздел 3") Босния и Герцеговина
-							option(value="Раздел 4") Великобритания
-							option(value="Раздел 5") Нидерланды
-							option(value="Раздел 6") ОАЭ
-							option(value="Раздел 7") Норвегия
-							option(value="Раздел 8") США
-							option(value="Раздел 8") Финляндия
+						.form__field
+							label.select__label Страна
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Австралия") Австралия
+								option(value="Аргентина") Аргентина
+								option(value="Босния и Герцеговина") Босния и Герцеговина
+								option(value="Великобритания") Великобритания
+								option(value="Нидерланды") Нидерланды
+								option(value="ОАЭ") ОАЭ
+								option(value="Норвегия") Норвегия
+								option(value="США") США
+								option(value="Финляндия") Финляндия
 
-					.form__field.width_3
-						select(data-placeholder="Область").width_3
-							option(value="")
-							option(value="Раздел 1") 1
-							option(value="Раздел 2") 2
+						.form__field
+							label.select__label Область
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
 
-					.form__field.width_3
-						select(data-placeholder="Город").width_3
-							option(value="")
-							option(value="Раздел 1") 1
-							option(value="Раздел 2") 2
+						.form__field
+							label.select__label Город
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") Париж
+								option(value="Раздел 2") Амстердам
+								option(value="Раздел 2") Осло
 
-					.form__field.width_3
-						select(data-placeholder="Гражданство").width_3
-							option(value="")
-							option(value="Раздел 1") 1
-							option(value="Раздел 2") 2
+						.form__field
+							label.select__label Гражданство
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
 
-					.form__field.width_2_3
+						.form__field.width_2_3
 
-					.form__field.width_3
-						span Место работы, организация
-							input(type='text')
+						.badges__gender.width_3 
+							span Пол
+								.badges__gender_input 
+									input(type='radio', id='men', class='gender', name='gender')
+									label(for='men') Мужской
+								.badges__gender_input 
+									input(type='radio', id='women', class='gender', name='gender')
+									label(for='women') Женский 
+						.form__field
 
-					.form__field.width_3
-						span Должность
-							input(type='text')
+						.form__field
 
-					.form__field.width_3
+						.form__field
+							label(for='job') Место работы, организация
+							input(type='text', id='job')
 
-					.form__field.width_3
-						span Телефон 
-							input(type='text')
+						.form__field
+							label(for='position') Должность
+							input(type='text', id='position')
 
-					.form__field.width_3
-						span E-mail 
-							input(type='text')
+						.form__field
 
-					.form__field.width_3
+						.form__field
+							label(for='tel') Телефон 
+							input(type='text', id='tel')
 
-					.form__field.width_3
-						select(data-placeholder="Категория бейджа").width_3
-							option(value="")
-							option(value="Раздел 1") 1
-							option(value="Раздел 2") 2
+						.form__field
+							label(for='mail') E-mail 
+							input(type='text', id='mail')
+
+						.form__field
+
+						.form__field
+							label.select__label Категория бейджа
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+						.form__field
+
+						.form__field
+
+						.form__field
+							.badges__access
+								input(type='checkbox', id='access')
+								label(for='access') Доступ в закрытый день 
+
+			.accordion__item
+				.accordion__toggle 
+					.accordion__toggle_name Смирнов Илья
+					.accordion__toggle_icon
+				.accordion__content 
+					form.form.grid.grid__3
+
+						.form__field
+							label(for='surname') Фамилия на русском
+							input(type='text', id='surname')
+
+						.form__field
+							label(for='name') Имя на русском
+							input(type='text', id='name')
+
+						.form__field
+							label(for='patronymic') Отчество
+							input(type='text', id='patronymic')
+
+						.form__field
+							label(for='surname_en') Фамилия на английском
+							input(type='text', id='surname_en')
+
+						.form__field
+							label(for='name_en') Имя на английском
+							input(type='text', id='name_en')
+
+						.form__field
+
+
+						.form__field
+							label.select__label Страна
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Австралия") Австралия
+								option(value="Аргентина") Аргентина
+								option(value="Босния и Герцеговина") Босния и Герцеговина
+								option(value="Великобритания") Великобритания
+								option(value="Нидерланды") Нидерланды
+								option(value="ОАЭ") ОАЭ
+								option(value="Норвегия") Норвегия
+								option(value="США") США
+								option(value="Финляндия") Финляндия
+
+						.form__field
+							label.select__label Область
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field
+							label.select__label Город
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") Париж
+								option(value="Раздел 2") Амстердам
+								option(value="Раздел 2") Осло
+
+						.form__field
+							label.select__label Гражданство
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field.width_2_3
+
+						.badges__gender.width_3 
+							span Пол
+								.badges__gender_input 
+									input(type='radio', id='men', class='gender', name='gender')
+									label(for='men') Мужской
+								.badges__gender_input 
+									input(type='radio', id='women', class='gender', name='gender')
+									label(for='women') Женский 
+						.form__field
+
+						.form__field
+
+						.form__field
+							label(for='job') Место работы, организация
+							input(type='text', id='job')
+
+						.form__field
+							label(for='position') Должность
+							input(type='text', id='position')
+
+						.form__field
+
+						.form__field
+							label(for='tel') Телефон 
+							input(type='text', id='tel')
+
+						.form__field
+							label(for='mail') E-mail 
+							input(type='text', id='mail')
+
+						.form__field
+
+						.form__field
+							label.select__label Категория бейджа
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+						.form__field
+
+						.form__field
+
+						.form__field
+							.badges__access
+								input(type='checkbox', id='access')
+								label(for='access') Доступ в закрытый день 
+			
+			.accordion__item
+				.accordion__toggle 
+					.accordion__toggle_name Константин Константинопольский
+					.accordion__toggle_icon
+				.accordion__content 
+					form.form.grid.grid__3
+
+						.form__field
+							label(for='surname') Фамилия на русском
+							input(type='text', id='surname')
+
+						.form__field
+							label(for='name') Имя на русском
+							input(type='text', id='name')
+
+						.form__field
+							label(for='patronymic') Отчество
+							input(type='text', id='patronymic')
+
+						.form__field
+							label(for='surname_en') Фамилия на английском
+							input(type='text', id='surname_en')
+
+						.form__field
+							label(for='name_en') Имя на английском
+							input(type='text', id='name_en')
+
+						.form__field
+
+
+						.form__field
+							label.select__label Страна
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Австралия") Австралия
+								option(value="Аргентина") Аргентина
+								option(value="Босния и Герцеговина") Босния и Герцеговина
+								option(value="Великобритания") Великобритания
+								option(value="Нидерланды") Нидерланды
+								option(value="ОАЭ") ОАЭ
+								option(value="Норвегия") Норвегия
+								option(value="США") США
+								option(value="Финляндия") Финляндия
+
+						.form__field
+							label.select__label Область
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field
+							label.select__label Город
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") Париж
+								option(value="Раздел 2") Амстердам
+								option(value="Раздел 2") Осло
+
+						.form__field
+							label.select__label Гражданство
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field.width_2_3
+
+						.badges__gender.width_3 
+							span Пол
+								.badges__gender_input 
+									input(type='radio', id='men', class='gender', name='gender')
+									label(for='men') Мужской
+								.badges__gender_input 
+									input(type='radio', id='women', class='gender', name='gender')
+									label(for='women') Женский 
+						.form__field
+
+						.form__field
+
+						.form__field
+							label(for='job') Место работы, организация
+							input(type='text', id='job')
+
+						.form__field
+							label(for='position') Должность
+							input(type='text', id='position')
+
+						.form__field
+
+						.form__field
+							label(for='tel') Телефон 
+							input(type='text', id='tel')
+
+						.form__field
+							label(for='mail') E-mail 
+							input(type='text', id='mail')
+
+						.form__field
+
+						.form__field
+							label.select__label Категория бейджа
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+						.form__field
+
+						.form__field
+
+						.form__field
+							.badges__access
+								input(type='checkbox', id='access')
+								label(for='access') Доступ в закрытый день 
+
+			.accordion__item
+				.accordion__toggle 
+					.accordion__toggle_name Бейдж №4
+					.accordion__toggle_icon
+				.accordion__content 
+					form.form.grid.grid__3
+
+						.form__field
+							label(for='surname') Фамилия на русском
+							input(type='text', id='surname')
+
+						.form__field
+							label(for='name') Имя на русском
+							input(type='text', id='name')
+
+						.form__field
+							label(for='patronymic') Отчество
+							input(type='text', id='patronymic')
+
+						.form__field
+							label(for='surname_en') Фамилия на английском
+							input(type='text', id='surname_en')
+
+						.form__field
+							label(for='name_en') Имя на английском
+							input(type='text', id='name_en')
+
+						.form__field
+
+
+						.form__field
+							label.select__label Страна
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Австралия") Австралия
+								option(value="Аргентина") Аргентина
+								option(value="Босния и Герцеговина") Босния и Герцеговина
+								option(value="Великобритания") Великобритания
+								option(value="Нидерланды") Нидерланды
+								option(value="ОАЭ") ОАЭ
+								option(value="Норвегия") Норвегия
+								option(value="США") США
+								option(value="Финляндия") Финляндия
+
+						.form__field
+							label.select__label Область
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field
+							label.select__label Город
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") Париж
+								option(value="Раздел 2") Амстердам
+								option(value="Раздел 2") Осло
+
+						.form__field
+							label.select__label Гражданство
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+
+						.form__field.width_2_3
+
+						.badges__gender.width_3 
+							span Пол
+								.badges__gender_input 
+									input(type='radio', id='men', class='gender', name='gender')
+									label(for='men') Мужской
+								.badges__gender_input 
+									input(type='radio', id='women', class='gender', name='gender')
+									label(for='women') Женский 
+						.form__field
+
+						.form__field
+
+						.form__field
+							label(for='job') Место работы, организация
+							input(type='text', id='job')
+
+						.form__field
+							label(for='position') Должность
+							input(type='text', id='position')
+
+						.form__field
+
+						.form__field
+							label(for='tel') Телефон 
+							input(type='text', id='tel')
+
+						.form__field
+							label(for='mail') E-mail 
+							input(type='text', id='mail')
+
+						.form__field
+
+						.form__field
+							label.select__label Категория бейджа
+							select(class="js-example-basic-single")
+								option(value="") 
+								option(value="Раздел 1") 1
+								option(value="Раздел 2") 2
+						.form__field
+
+						.form__field
+
+						.form__field
+							.badges__access
+								input(type='checkbox', id='access')
+								label(for='access') Доступ в закрытый день 
+
+		.badges__btnadd
+			button.btn.btn_gray <i class="fa fa-plus" aria-hidden="true"></i> Добавить бейдж
+		.badges__button
+			button.btn.btn_red Сохранить изменения

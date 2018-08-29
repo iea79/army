@@ -1,41 +1,98 @@
 .accordion {
-	display: block;
-	width: 100%;
-	&Label{
-		cursor: default !important;
-	}
+	// &:before{
+	// 	content: '';
+	// 	display: block;
+	// 	// width: 95%;
+	// 	// padding-bottom: 10px;
+	// 	border-top: 1px solid $white_smoke;
+	// }
 	&__item {
-		margin-bottom: 0;
+		padding-left: 28px;
+		padding-right: 28px;
+		box-sizing: content-box;
+		margin-left: -28px;
+		margin-right: -28px;
+		// position: relative;
+		@extend %clear_a;
+		&:last-child {
+			&:after {
+				content: '';
+				display: block;
+				border-bottom: 1px solid $white_smoke;
+			}
+		}
+		// &:after{
+		// 	content: '';
+		// 	border-bottom: 1px solid $white_smoke;
+		// }
+		&.open {
+			background-color: $pale_gray;
+			.accordion {
+				&__toggle {
+					padding-top: 34px;
+					padding-bottom: 34px;
+					border-bottom: 1px solid $white_smoke;
+					&_icon {
+						top: 35px;
+					}
+					&_name {
+						&:after {
+							content: '\f106';
+							
+						}
+					}
+				}
+				&__content {
+					height: auto;
+					margin-bottom: 10px;
+					border-bottom: 1px solid transparent;
+				}
+			}
+		}
 	}
 	&__toggle {
+		border-top: 1px solid $white_smoke;
 		cursor: pointer;
-		display: block;
-		width: 100%;
-		padding: 15px 0 15px 0;
+		padding: 17px 0;
 		color: $main_color;
 		position: relative;
-		border-top: 1px solid $color_info;
-		&:after {
-			position: absolute;
-			content: "\f107";
-			font: normal normal normal 14px/1 FontAwesome;
+		transition: all .3s;
+		&_name{
 			display: inline-block;
-			font-size: 18px;
-			transition: all .4s;
-			right: -20px;
-			top: 17px;
-			color: $color_warning;
+			font-family: $font_caption;
+			font-size: 24px;
+			font-weight: 700;
+			&:after {
+				content: "\f107";
+				font: normal normal normal 25px/1 FontAwesome;
+				color: $color_warning;
+				padding-left: 5px;
+			}
+		}
+		&_icon{
+			position: absolute;		    
+		    right: 28px;
+		    top: 20px;
+	        width: 18px;
+	        // height: 18px;
+	        color: $color_info;
+	        transition: all .3s;
+	        &:after{
+	        	font: normal normal normal 22px/1 FontAwesome;
+	        	content: "\f014";
+	        }
+	        &:hover{
+	        	color: $color_warning;
+	        }
 		}
 		&.active {
-			background-color: $white_smoke;
-			color: $main_color;
-			opacity: 1;
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 25px;
-			border: none;
-			&:after {
-				content: "\f106";
+			&:before{
+				display: none;
+			}
+			.accordion__toggle_name{
+				&:after {
+					content: "\f106";
+				}
 			}
 		}
 	}
@@ -44,14 +101,9 @@
 		height: 0;
 		overflow: hidden;
 		font-weight: 400;
-		line-height: 25px;
-		background-color: $white_smoke;
+		transition: .3s;
 		padding: 0;
 		&.open {
-			width: 100%;
-			height: auto;
-			margin-bottom: 10px;
-			border-bottom: 1px solid transparent;
 		}
 	}
 	&__check{
@@ -60,7 +112,7 @@
 			color: $main_color !important;
 			display: inline-block !important;
 			padding-left: 5px;
-			font-family: "Arial";
+			font-family: $main_font_family;
 			font-size: 14px  !important;
 			font-style: normal !important;
 		}

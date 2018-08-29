@@ -1,0 +1,37 @@
+.terms{
+	&__header{
+		padding-top: 32px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $white_smoke;
+	}
+	&__caption{
+		font-weight: 700;
+	}
+	&__data{
+		font-size: 14px;
+	}
+	&__item{
+		padding: 16px 0;
+		border-bottom: 1px solid $white_smoke;
+	}
+	&__left{
+		font-size: 14px;
+		overflow: hidden;
+		padding-right: 45px;
+	}
+	&__right{
+		font-size: 14px;
+		position: relative;
+		float: right;
+		&:before{
+			position: absolute;
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-image: url(../img/clock.png);
+			left: -28px;
+			bottom: 1px;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.help{
+	&__text{
+		margin-bottom: 26px;
+		color: $main_color;
+		font-family: $main_font_family;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	&Table{
+		margin-top: 41px;
+		margin-bottom: 40px;
+		width: 100%;
+		font-size: 14px;
+		thead{
+			background-color: $pale_gray;
+			th{
+				text-align: left;
+				font-weight: 400;
+				padding: 28px 10px 31px 10px;
+				&:nth-child(1){
+					width: 75px;
+					text-align: center;
+				}
+				&:nth-child(3){
+					width: 160px;
+				}
+				&:nth-child(4){
+					width: 100px;
+					text-align: center;
+				}
+			}
+		}
+		tbody{
+			td{
+				padding: 15px 10px;
+				&:nth-child(1){
+					text-align: center;
+				}
+				&:nth-child(4){
+					text-align: center;
+				}
+				&:nth-child(3){
+					color: $color_success;
+				}
+				.txt_danger{
+					color: $color_warning;
+				}
+				.inactive{
+					color: $color_success;
+				}
+			}
+		}
+	}
+}

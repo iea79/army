@@ -25,6 +25,10 @@
 	}
 	&__action {
 		float: right;
+		min-width: 180px;
+		.btn {
+			width: 100%;
+		}
 	}
 	&__center {
 		overflow: hidden;

@@ -60,6 +60,18 @@
 			}
 		}
 	}
+	&__selectDrop {
+		&.select2-container--open .select2-dropdown {
+			width: auto !important;
+			max-width: 300px;
+		}
+		.select2-results__option {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			
+		}
+	}
 	&__search {
 		position: relative;
 		float: left;

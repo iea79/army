@@ -1,0 +1,26 @@
+.datepicker{
+	background-color: $white_smoke;
+	padding: 10px 0;
+	padding-left: 15px;
+	width: 35%;
+	float: right;
+	input{
+		background-color: $white_smoke;
+		border: none;
+		width: 80%;
+		font-weight: 700;
+		cursor: pointer;
+	}
+	&:after{
+	    position: absolute;
+	    content: "\f107";
+	    font: normal normal normal 18px/1 FontAwesome;
+	    display: inline-block;
+	    -webkit-transition: all .4s;
+	    -o-transition: all .4s;
+	    transition: all .4s;
+	    right: 15px;
+	    top: 15px;
+	    color: #8c0a14;
+	}
+}

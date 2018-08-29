@@ -7,7 +7,9 @@
     <meta name="description" content=""/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <link href="libs/font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="css/style.css?0.2" rel="stylesheet"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
+    <link href="css/jQuery_UI/jquery-ui.min.css" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico"/>
   </head>
   <body>
     <aside class="aside">
@@ -55,6 +57,98 @@
       <!-- begin main__content-->
       <main class="main__content">
         <h1 class="page__title">Деловая программа</h1>
+        <div class="filters">
+          <div class="filters__left">
+            <div class="filters__item">
+              <select data-placeholder="Темы">
+                <option value=""></option>
+                <option value="Россия">Тема 1</option>
+                <option value="США">Тема 2</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <select data-placeholder="Места">
+                <option value=""></option>
+                <option value="Регион 1">Место 1</option>
+                <option value="Регион 2">Место 2</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <select data-placeholder="Организатор">
+                <option value=""></option>
+                <option value="Раздел 1">Организатор 1</option>
+                <option value="Раздел 2">Организатор 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters__right">
+            <div class="divide__prise">
+              <div class="divide__prise_input">
+                <input class="gender" type="radio" id="paid" name="gender"/>
+                <label for="paid"> Платные</label>
+              </div>
+              <div class="divide__prise_input">
+                <input class="gender" type="radio" id="free" name="gender"/>
+                <label for="free">Бесплатные</label>
+              </div>
+            </div>
+            <div class="filters__item datepicker"><i class="fa fa-calendar" aria-hidden="true"></i>
+              <input type="text" id="datepicker" value="Все даты"/>
+            </div>
+          </div>
+          <div class="filters__drop">
+            <ul class="alphabet">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="divide">
+          <div class="page__titleSecond divide_date">22 Августа, Среда</div>
+          <!-- Item 1-->
+          <div class="divide__item">
+            <div class="divide__item_time">12:30</div>
+            <div class="inLine__action">
+              <button class="btn btn_check">Принять участие</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name divide__item_caption">Промышленные и инновационные кластеры, технопарки как инструмент диверсификации</div>
+              <div class="inLine__country">Сбор, регистрация, приветственное слово, оглашение программы</div>
+              <div class="inLine__text">Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров </div>
+            </div>
+            <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a><a class="inLine__labelItem" href="#">авиация</a></div>
+          </div>
+          <!-- Item 2-->
+          <div class="divide__item">
+            <div class="divide__item_time">12:30</div>
+            <div class="inLine__action">
+              <button class="btn btn_check btn_check_danger">Участвую</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name divide__item_caption">Техника Железнодорожных войск, концептуальные направления развития до 2020 года</div>
+              <div class="inLine__country">Сбор, регистрация, приветственное слово, оглашение программы</div>
+              <div class="inLine__text">Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров </div>
+            </div>
+            <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a><a class="inLine__labelItem" href="#">авиация</a><a class="inLine__labelItem" href="#">авиация</a></div>
+          </div>
+        </div>
+        <div class="divide__two">
+          <!-- Item 3-->
+          <div class="divide__item_two">
+            <div class="page__titleSecond divide_date">22 Августа, Среда</div>
+            <div class="divide__item_time">12:30</div>
+            <div class="inLine__action">
+              <button class="btn btn_check">Принять участие</button>
+            </div>
+            <div class="inLine__center">
+              <div class="inLine__name divide__item_caption">Промышленные и инновационные кластеры, технопарки как инструмент диверсификации</div>
+              <div class="inLine__country">Сбор, регистрация, приветственное слово, оглашение программы</div>
+              <div class="inLine__text">Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров </div>
+            </div>
+            <div class="inLine__label"><a class="inLine__labelItem" href="#">самолеты</a></div>
+          </div>
+        </div>
       </main>
       <!-- end main__content -->
     </div>
@@ -62,5 +156,6 @@
     <script src="js/modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="js/function.js"></script>
+    <script src="js/jQuery_UI/jquery-ui.min.js"></script>
   </body>
 </html>

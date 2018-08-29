@@ -19,7 +19,6 @@ textarea {
 	border-bottom: 1px solid $color_info;
 	width: 100%;
 	transition: all .3s;
-	background-color: transparent;
 	&:hover {
 	}
 	&:focus {
@@ -38,6 +37,12 @@ textarea {
 	}
 }
 
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+}
+
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
@@ -48,7 +53,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: auto;
 }
 
-// Input checkbox and radio ===============================================
+// Input checkbox and radio ===========================================
 input[type=checkbox],
 input[type=radio] {
 	padding: 0;
@@ -67,7 +72,8 @@ input[type=radio] {
     overflow: hidden;
     margin-top: -4px;
     vertical-align: middle;
-    -moz-webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     outline: 0;
     background: 0 0;
     text-align: center;
@@ -79,7 +85,7 @@ input[type=radio] {
 }
 
 input[type=radio] {
-    border-radius: 50%;
+    border-radius: 4px;
 }
 
 input[type=checkbox]:before,
@@ -88,17 +94,12 @@ input[type=radio]:before {
 }
 
 input[type=radio]:checked:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    top: 50%;
-    left: 50%;
-    margin-top: -3px;
-    margin-left: -3px;
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background: #000;
+    content: "\f00c";
+    font: normal normal normal 12px/1 FontAwesome;
+    text-align: center;
+    line-height: 18px;
+    color: #fff;
+    background-color: $color_danger;
 }
 
 input[type=checkbox]:checked:before,
@@ -136,41 +137,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 // Style for button and pseudo button for input and link
 .btn {
-	color: $color_warning;
 	font-family: $main_font_family;
+	color: $color_withe;
 	font-size: 14px;
 	font-weight: 700;
-	padding: 11px 15px 12px;
-	border: none;
+	padding: 14px 23px;
 	outline: none;
-	text-decoration: none;
 	display: inline-block;
-	background-color: $color_withe;
-	border: 1px solid $btn_default_border_color;
-	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	@include trs(0.3s);		
-	&_icon{
-		color: $color_info;
-		padding-right: 5px;
-	}
-	&_send{
-		background-color: $burgundy;
-		color: $color_withe;
-		border-color: $burgundy;
-		font-family: "Arial";
-		font-weight: 400;
-
-		padding-left: 35px;
-		background-image: url('../img/send.png');
-		background-repeat: no-repeat;
-		background-position: left 10px center;
-		&:hover {
-			background-color: lighten($burgundy, 10%);
-			border-color: lighten($burgundy, 10%);
-		}
-	}
+	transition: all .3s;
+	border: none;	
 	&_check {
 		background-color: transparent;
 		border: 1px solid $color_info;
@@ -178,20 +155,72 @@ input[type=checkbox]:disabled:indeterminate:before {
 		padding-left: 33px;
 		background: url('../img/check.png') no-repeat left 14px center;
 		&:hover {
-			background-color: #f8f8f8;
+			background-color: $pale_gray;
 		}
 		&_danger {
 			background: url('../img/check-d.png') no-repeat left 14px center;
-			background-color: #f8f8f8;
-			border-color: #f8f8f8;
+			background-color: $pale_gray;
+			border-color: $pale_gray;
 			color: $main_color;
 			cursor: default;
 			&:hover {
-				// background-color: #f8f8f8;
+				// background-color: $pale_gray;
 			}
 		}
 	}
-	&_down{
-		padding-left: 38px;
+	&_warning{
+		font-weight: 400;
+		background-color: $color_warning;
+		i{
+			padding-left: 5px;
+		}
 	}
+	&_white{
+		color: $color_warning;
+		border: 1px solid $btn_default_border_color;
+		padding-left: 35px;
+		text-decoration: none;
+		&_span{
+			position: absolute;
+			top: 11px;
+			left: 10px;
+		}
+		&:hover{
+			color: $main_color;
+		}
+	}
+	&_red{
+		background-color: $color_warning;
+		font-size: 18px;
+		font-weight: 400;
+	}
+	&_gray{
+		color: $burgundy;
+		background-color: $white_smoke;
+		font-weight: 400;
+		position: relative;
+		padding-left: 35px;
+		.fa{
+			font-size: 16px;
+			padding-right: 6px;
+			position: absolute;
+			left: 15px;
+			top: 13px;
+		}
+	}
+}
+
+.btn_check, .btn_gray{
+	&:hover{
+		background-color: $light_gray;
+		color: $burgundy;
+	}
+}
+.btn_warning:hover, .btn_red:hover{
+	background-color: lighten($burgundy, 10%);
+	border-color: lighten($burgundy, 10%);
+}
+.btn_send:hover {
+    background-color: #cd0929;
+    border-color: #cd0929;
 }

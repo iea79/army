@@ -54,56 +54,56 @@ block content
 
 	form.form.grid
 		.form__field.width_3_4
-			span Организация
-				input(id='check1', type='text')
-				label(for='check1') Название организации, с которой заключен договор
+			label.form__label(for='check1') Организация
+			input(id='check1', type='text')
+			span.form__info Название организации, с которой заключен договор
 
 		.form__field.width_4
-			span Номер договора
-				input(id='check2', type='text')
-				label(for='check2') Номер договора, как в договоре
+			label.form__label(for='check2') Номер договора
+			input(id='check2', type='text')
+			span.form__info Номер договора, как в договоре
 
 
 		.form__field
-			span Название организации для русского алфавитного списка
-				input(id='check3', type='text')
-				label(for='check3') Образец заполнения: МКВ, ООО
+			label.form__label(for='check3') Название организации для русского алфавитного списка
+			input(id='check3', type='text')
+			span.form__info Образец заполнения: МКВ, ООО
 
 
 		.form__field
-			span Название организации для английского алфавитного списка
-				input(id='check4', type='text')
-				label(for='check4') Образец заполнения: ICE, Ltd.
+			label.form__label(for='check4') Название организации для английского алфавитного списка
+			input(id='check4', type='text')
+			span.form__info Образец заполнения: ICE, Ltd.
 
 
 		.form__field.width_5
-			span Индекс
-				input(id='check5', type='text')
-				label(for='check5') Индекс
+			label.form__label(for='check5') Индекс
+			input(id='check5', type='text')
+			span.form__info Индекс
 
 
 		.form__field.width_40
-			span Страна
-				input(id='check6', type='text')
-				label(for='check6') Выберите страну	
+			label.form__label(for='check6') Страна
+			input(id='check6', type='text')
+			span.form__info Выберите страну
 
 
 		.form__field.width_40
-			span Регион
-				input(id='check7', type='text')
-				label(for='check7') Выберите регион	
+			label.form__label(for='check7') Регион
+			input(id='check7', type='text')
+			span.form__info Выберите регион	
 
 
 		.form__field
-			span Описание организации на русском языке
-				input(id='check8', type='text')
-				label(for='check8') Образец заполнения: ICE, Ltd.
+			label.form__label(for='check8') Описание организации на русском языке
+			input(id='check8', type='text')
+			span.form__info Образец заполнения: ICE, Ltd.
 
 
 		.form__field
-			span Описание организации на английском языке
-				input(id='check9', type='text')
-				label(for='check9') Образец заполнения: ICE, Ltd.
+			label.form__label(for='check9') Описание организации на английском языке
+			input(id='check9', type='text')
+			span.form__info Образец заполнения: ICE, Ltd.
 
 
 		.form__logo
@@ -112,8 +112,8 @@ block content
 				label
 					input(type='file', name='file')
 					span Выбрать файл
-			span(id='filename', type='text', class="filename", placeholder='IMG_8177')
-			label Загрузите логотип
+			span(id='filename' class="filename")
+			label.form__info Загрузите логотип
 
 		.form__select.width_100.js_multiplecheckwrap
 			select(data-placeholder="Тематический раздел", class="js-example-basic-single js_multiplecheck", multiple="multiple", id="select")
@@ -130,7 +130,7 @@ block content
 				option(value="Раздел 11") Средства индивидуальной и  коллективной защиты
 				option(value="Раздел 12") Техника и оборудование
 				
-			label.accordionLabel Выберите тематический раздел
+			label.form__info Выберите тематический раздел
 
 		.form__button
-			button Сохранить
+			button.btn.btn_red Сохранить

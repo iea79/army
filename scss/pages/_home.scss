@@ -3,11 +3,6 @@
 		display: inline-block;
 		position: relative;
 		margin-bottom: 35px;
-		&_img{
-			position: absolute;
-			top: 9px;
-			left: 10px;
-		}
 	}
 	&__help{
 		background-color: $pale_gray;

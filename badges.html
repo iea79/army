@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Карточка компании</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+    <link href="libs/font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
+    <link href="css/jQuery_UI/jquery-ui.min.css" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <aside class="aside">
+      <div class="aside__wrapper"><a class="logo" href="/"><img src="img/logo.png" alt=""/></a>
+        <nav class="nav_aside">
+          <ul class="nav">
+            <li class="nav__item active"><a class="nav__link" href="#">Профиль компании</a>
+              <ul class="navSub">
+                <li class="navSub__item active"><a class="navSub__link" href="#">Карточка компании</a></li>
+                <li class="navSub__item"><a class="navSub__link" href="#">Контакты компании</a></li>
+                <li class="navSub__item"><a class="navSub__link" href="#">Мой диск</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Загрузки</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Формы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Заказы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Пропуска</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Сторонние подрядчики</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Встречи</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Программа</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Сводный список сроков</a></li>
+          </ul>
+        </nav>
+        <!-- begin footer -->
+        <footer class="footer">© Международный военно-технический форум, 2018 </footer>
+        <!-- end footer -->
+      </div>
+    </aside>
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__left">
+          <div class="account"><i class="icon-user"> </i>Константин Петрович</div>
+        </div>
+        <div class="header__right"><a class="header__link" href="#"><i class="icon-quest"> </i>Помощь</a>
+          <div class="lang">
+            <div class="lang__current"><img class="lang__flag" src="img/ru.png" alt=""/>RU</div>
+            <ul class="lang__list">
+              <li class="lang__item"><a class="lang__link" href="#"><img class="lang__flag" src="img/en.png" alt=""/>EN</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin main__content-->
+      <main class="main__content">
+        <h1 class="page__title">Бейджи</h1>
+        <div class="badges">
+          <div class="accordion">
+            <div class="accordion__item open">
+              <div class="accordion__toggle"> 
+                <div class="accordion__toggle_name">Бейдж №1</div>
+                <div class="accordion__toggle_icon"></div>
+              </div>
+              <div class="accordion__content"> 
+                <form class="form grid grid__3">
+                  <div class="form__field">
+                    <label for="surname">Фамилия на русском</label>
+                    <input type="text" id="surname"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name">Имя на русском</label>
+                    <input type="text" id="name"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="surname_en">Фамилия на английском</label>
+                    <input type="text" id="surname_en"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name_en">Имя на английском</label>
+                    <input type="text" id="name_en"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Страна</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Австралия">Австралия</option>
+                      <option value="Аргентина">Аргентина</option>
+                      <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                      <option value="Великобритания">Великобритания</option>
+                      <option value="Нидерланды">Нидерланды</option>
+                      <option value="ОАЭ">ОАЭ</option>
+                      <option value="Норвегия">Норвегия</option>
+                      <option value="США">США</option>
+                      <option value="Финляндия">Финляндия</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Область</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Город</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">Париж</option>
+                      <option value="Раздел 2">Амстердам</option>
+                      <option value="Раздел 2">Осло</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Гражданство</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field width_2_3"></div>
+                  <div class="badges__gender width_3"> <span>Пол
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="men" name="gender"/>
+                        <label for="men">Мужской</label>
+                      </div>
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="women" name="gender"/>
+                        <label for="women">Женский </label>
+                      </div></span></div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="job">Место работы, организация</label>
+                    <input type="text" id="job"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="position">Должность</label>
+                    <input type="text" id="position"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="tel">Телефон </label>
+                    <input type="text" id="tel"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="mail">E-mail </label>
+                    <input type="text" id="mail"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Категория бейджа</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <div class="badges__access">
+                      <input type="checkbox" id="access"/>
+                      <label for="access">Доступ в закрытый день </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__toggle"> 
+                <div class="accordion__toggle_name">Смирнов Илья</div>
+                <div class="accordion__toggle_icon"></div>
+              </div>
+              <div class="accordion__content"> 
+                <form class="form grid grid__3">
+                  <div class="form__field">
+                    <label for="surname">Фамилия на русском</label>
+                    <input type="text" id="surname"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name">Имя на русском</label>
+                    <input type="text" id="name"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="surname_en">Фамилия на английском</label>
+                    <input type="text" id="surname_en"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name_en">Имя на английском</label>
+                    <input type="text" id="name_en"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Страна</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Австралия">Австралия</option>
+                      <option value="Аргентина">Аргентина</option>
+                      <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                      <option value="Великобритания">Великобритания</option>
+                      <option value="Нидерланды">Нидерланды</option>
+                      <option value="ОАЭ">ОАЭ</option>
+                      <option value="Норвегия">Норвегия</option>
+                      <option value="США">США</option>
+                      <option value="Финляндия">Финляндия</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Область</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Город</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">Париж</option>
+                      <option value="Раздел 2">Амстердам</option>
+                      <option value="Раздел 2">Осло</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Гражданство</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field width_2_3"></div>
+                  <div class="badges__gender width_3"> <span>Пол
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="men" name="gender"/>
+                        <label for="men">Мужской</label>
+                      </div>
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="women" name="gender"/>
+                        <label for="women">Женский </label>
+                      </div></span></div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="job">Место работы, организация</label>
+                    <input type="text" id="job"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="position">Должность</label>
+                    <input type="text" id="position"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="tel">Телефон </label>
+                    <input type="text" id="tel"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="mail">E-mail </label>
+                    <input type="text" id="mail"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Категория бейджа</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <div class="badges__access">
+                      <input type="checkbox" id="access"/>
+                      <label for="access">Доступ в закрытый день </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__toggle"> 
+                <div class="accordion__toggle_name">Константин Константинопольский</div>
+                <div class="accordion__toggle_icon"></div>
+              </div>
+              <div class="accordion__content"> 
+                <form class="form grid grid__3">
+                  <div class="form__field">
+                    <label for="surname">Фамилия на русском</label>
+                    <input type="text" id="surname"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name">Имя на русском</label>
+                    <input type="text" id="name"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="surname_en">Фамилия на английском</label>
+                    <input type="text" id="surname_en"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name_en">Имя на английском</label>
+                    <input type="text" id="name_en"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Страна</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Австралия">Австралия</option>
+                      <option value="Аргентина">Аргентина</option>
+                      <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                      <option value="Великобритания">Великобритания</option>
+                      <option value="Нидерланды">Нидерланды</option>
+                      <option value="ОАЭ">ОАЭ</option>
+                      <option value="Норвегия">Норвегия</option>
+                      <option value="США">США</option>
+                      <option value="Финляндия">Финляндия</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Область</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Город</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">Париж</option>
+                      <option value="Раздел 2">Амстердам</option>
+                      <option value="Раздел 2">Осло</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Гражданство</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field width_2_3"></div>
+                  <div class="badges__gender width_3"> <span>Пол
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="men" name="gender"/>
+                        <label for="men">Мужской</label>
+                      </div>
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="women" name="gender"/>
+                        <label for="women">Женский </label>
+                      </div></span></div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="job">Место работы, организация</label>
+                    <input type="text" id="job"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="position">Должность</label>
+                    <input type="text" id="position"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="tel">Телефон </label>
+                    <input type="text" id="tel"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="mail">E-mail </label>
+                    <input type="text" id="mail"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Категория бейджа</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <div class="badges__access">
+                      <input type="checkbox" id="access"/>
+                      <label for="access">Доступ в закрытый день </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__toggle"> 
+                <div class="accordion__toggle_name">Бейдж №4</div>
+                <div class="accordion__toggle_icon"></div>
+              </div>
+              <div class="accordion__content"> 
+                <form class="form grid grid__3">
+                  <div class="form__field">
+                    <label for="surname">Фамилия на русском</label>
+                    <input type="text" id="surname"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name">Имя на русском</label>
+                    <input type="text" id="name"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="surname_en">Фамилия на английском</label>
+                    <input type="text" id="surname_en"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="name_en">Имя на английском</label>
+                    <input type="text" id="name_en"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Страна</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Австралия">Австралия</option>
+                      <option value="Аргентина">Аргентина</option>
+                      <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                      <option value="Великобритания">Великобритания</option>
+                      <option value="Нидерланды">Нидерланды</option>
+                      <option value="ОАЭ">ОАЭ</option>
+                      <option value="Норвегия">Норвегия</option>
+                      <option value="США">США</option>
+                      <option value="Финляндия">Финляндия</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Область</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Город</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">Париж</option>
+                      <option value="Раздел 2">Амстердам</option>
+                      <option value="Раздел 2">Осло</option>
+                    </select>
+                  </div>
+                  <div class="form__field">
+                    <label class="select__label">Гражданство</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field width_2_3"></div>
+                  <div class="badges__gender width_3"> <span>Пол
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="men" name="gender"/>
+                        <label for="men">Мужской</label>
+                      </div>
+                      <div class="badges__gender_input"> 
+                        <input class="gender" type="radio" id="women" name="gender"/>
+                        <label for="women">Женский </label>
+                      </div></span></div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="job">Место работы, организация</label>
+                    <input type="text" id="job"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="position">Должность</label>
+                    <input type="text" id="position"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label for="tel">Телефон </label>
+                    <input type="text" id="tel"/>
+                  </div>
+                  <div class="form__field">
+                    <label for="mail">E-mail </label>
+                    <input type="text" id="mail"/>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <label class="select__label">Категория бейджа</label>
+                    <select class="js-example-basic-single">
+                      <option value=""> </option>
+                      <option value="Раздел 1">1</option>
+                      <option value="Раздел 2">2</option>
+                    </select>
+                  </div>
+                  <div class="form__field"></div>
+                  <div class="form__field"></div>
+                  <div class="form__field">
+                    <div class="badges__access">
+                      <input type="checkbox" id="access"/>
+                      <label for="access">Доступ в закрытый день </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="badges__btnadd">
+            <button class="btn btn_gray"><i class="fa fa-plus" aria-hidden="true"></i> Добавить бейдж</button>
+          </div>
+          <div class="badges__button">
+            <button class="btn btn_red">Сохранить изменения</button>
+          </div>
+        </div>
+      </main>
+      <!-- end main__content -->
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/jQuery_UI/jquery-ui.min.js"></script>
+  </body>
+</html>

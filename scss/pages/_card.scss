@@ -2,24 +2,64 @@
 	margin-top: 25px;
 	font-family: $main_font_family;
 	color: $light_gray_«Fedex»;
-	label{
-		font-style: italic;
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 25px;
-		cursor: pointer;
-		color: $light_gray_«Fedex»;
+	&__info {
+			font-style: italic;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 25px;
+			cursor: pointer;
+			color: $light_gray_«Fedex»;
+	}
+	&__label{
+		color: $main_color;
+		font-size: 14px;
+		font-weight: 700;
 	}
 	&__field{
 		width: 100%;
 		margin-bottom: 18px !important;
 		input{
 			padding: 4px 0;
+			background-color: transparent;
 		}
 		span{
-			color: $main_color;
-			font-size: 14px;
-			font-weight: 700;
+		}
+		.select2, .select2-container, .select2-container--default, .select2-container--focus{
+			margin-top: 10px;
+			width: 100% !important;
+			border: none;
+		}
+		.select2-selection.select2-selection--single{
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid $color_info;
+			border-radius: 0;
+		}
+		.select2-selection__rendered{
+			padding-left: 0 !important;	
+			color: $main_color !important;
+			span{
+				color: $main_color !important;
+				font-size: 14px;
+				font-weight: 700;
+			}
+		}
+		.select2-selection__placeholder{
+			&:after{
+				width: 12px;
+				height: 8px;
+				display: inline-block;
+				content: "\f107";
+				font: normal normal normal 16px/1 FontAwesome;
+				color: $color_warning;
+				padding-left: 10px;
+			}
+		}
+		.select2-selection__arrow{
+			display: none !important;
+		}
+		span{
+		    outline: none !important;
 		}
 	}
 	&__logo{
@@ -52,16 +92,6 @@
 		background-color: $pale_gray;
 		padding: 20px;
 		margin-left: 30px;
-		button{
-			border: none;
-			background-color: $color_warning;
-			color: $color_withe;
-			padding: 15px 30px;
-			font-family: $main_font_family;
-			font-size: 18px;
-			font-weight: 400;
-			cursor: pointer;
-		}
 	}
 	&__select{
 		margin-top: 15px;
@@ -115,13 +145,16 @@
 	.select2-results__options{
 	    max-height: 100% !important;
 	}
-	.select2-dropdown {
-		position: static;
-		
-	}
 	.select2-dropdown.select2-dropdown--above{
 		border: none;
 		min-width: 100%;
+		position: static;
+	}
+	.select2-container--default.select2-dropdown{
+		width: 100%;
+	}
+	.select2-dropdown{
+		position: static !important;
 	}
 	.select2-search.select2-search--inline{
 		position: relative;
@@ -139,34 +172,6 @@
 	.select2-dropdown.select2-dropdown--below{
 		min-width: 100% !important;
 		border: none;
-	}
-}
-
-.js_multiplecheckwrap {
-	.select2-container--default .select2-selection--multiple .select2-selection__choice {
-		border: none;
-		background-color: transparent;
-		color: #111;
-		font-size: 14px;
-		padding-left: 0;
-		display: inline;
-		&:after {
-			content: ',';
-			
-		}
-		&:last-child {
-			
-		}
-		&:last-child,&:nth-last-child(2) {
-			&:after {
-				content: '';
-			}
-		}
-		&:nth-child(n+2) {
-		}
-	}
-	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-		display: none;
 	}
 }
 

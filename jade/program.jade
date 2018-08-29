@@ -7,4 +7,87 @@ block content
 
 	h1.page__title Деловая программа
 
+	.filters
+		.filters__left
+			.filters__item
+				select(data-placeholder="Темы")
+					option(value="")
+					option(value="Россия") Тема 1
+					option(value="США") Тема 2
+			.filters__item
+				select(data-placeholder="Места")
+					option(value="")
+					option(value="Регион 1") Место 1
+					option(value="Регион 2") Место 2
+			.filters__item
+				select(data-placeholder="Организатор")
+					option(value="")
+					option(value="Раздел 1") Организатор 1
+					option(value="Раздел 2") Организатор 2
+		.filters__right
+			.divide__prise
+				.divide__prise_input
+					input(type='radio', id='paid', class='gender', name='gender')
+					label(for='paid')  Платные
+				.divide__prise_input
+					input(type='radio', id='free', class='gender', name='gender')
+					label(for='free') Бесплатные
+			.filters__item.datepicker
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				input(type='text', id='datepicker', value='Все даты')
+		.filters__drop
+			ul.alphabet
+				li
+					a(href="#") 1
+				li
+					a(href="#") 2
+				li
+					a(href="#") 3
+				
+	
+	.divide
+		.page__titleSecond.divide_date 22 Августа, Среда
+		// Item 1
+		.divide__item
+			.divide__item_time 12:30
+			.inLine__action
+				button.btn.btn_check Принять участие
+			.inLine__center
+				.inLine__name.divide__item_caption Промышленные и инновационные кластеры, технопарки как инструмент диверсификации
+				.inLine__country Сбор, регистрация, приветственное слово, оглашение программы
+				.inLine__text Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров 
+			.inLine__label
+				a.inLine__labelItem(href="#") самолеты
+				a.inLine__labelItem(href="#") авиация
+		
+		// Item 2
+		.divide__item
+			.divide__item_time 12:30
+			.inLine__action
+				button.btn.btn_check.btn_check_danger Участвую
+			.inLine__center
+				.inLine__name.divide__item_caption Техника Железнодорожных войск, концептуальные направления развития до 2020 года
+				.inLine__country Сбор, регистрация, приветственное слово, оглашение программы
+				.inLine__text Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров 
+			.inLine__label
+				a.inLine__labelItem(href="#") самолеты
+				a.inLine__labelItem(href="#") авиация
+				a.inLine__labelItem(href="#") авиация
+
+	.divide__two
+
+		// Item 3
+		.divide__item_two
+			.page__titleSecond.divide_date 22 Августа, Среда
+			.divide__item_time 12:30
+			.inLine__action
+				button.btn.btn_check Принять участие
+			.inLine__center
+				.inLine__name.divide__item_caption Промышленные и инновационные кластеры, технопарки как инструмент диверсификации
+				.inLine__country Сбор, регистрация, приветственное слово, оглашение программы
+				.inLine__text Место: Зал воинской славы • Форма проведения: Открытая • Модератор: Максим Федоров 
+			.inLine__label
+				a.inLine__labelItem(href="#") самолеты
+
+
 	

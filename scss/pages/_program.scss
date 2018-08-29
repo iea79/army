@@ -1,0 +1,53 @@
+.divide{
+	&__two{
+		border-top: 1px solid $white_smoke;
+		margin: 30px -28px 0 -28px;
+		padding-top: 34px;
+	}
+	&_date{
+		border-bottom: 1px solid $color_info;
+		padding-bottom: 25px;
+		margin-bottom: 30px;	
+	}
+	&__item{
+		margin-top: 30px;
+		&_time{
+			display: block;
+			padding-bottom: 15px;
+			font-size: 14px;
+		}
+		&_two{
+			padding: 0 29px;
+		}
+		&_caption{
+			max-width: 606px;
+		}
+	}
+	&__prise{
+		position: relative;
+		float: left;
+	    margin: 15px 0 0 12px;
+	    &_input{
+	    	display: inline-block;
+	    	margin-left: 25px;
+	    }
+	    input:checked + label {
+		    padding: 0;
+		    color: $main_color;
+		    width: 18px;
+		    height: 18px;
+		}
+		input:checked{
+			border-radius: 4px !important;
+		}
+		input{
+			border: none;
+		}
+		label{
+			cursor: pointer;
+			font-size: 14px;
+			color: $color_success;
+		}
+	}
+
+}

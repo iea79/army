@@ -112,7 +112,7 @@
 	position: relative;
 	input[type=file] {
 		position: absolute;
-		opacity: 0;
+		display: none;
 	}
 	&Btn {
 		background-color: #ececec;

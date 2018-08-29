@@ -1,0 +1,94 @@
+.badges{
+	.select{
+		margin-top: 15px;
+	}
+	label{
+		color: $main_color;
+		font-size: 14px;
+		font-weight: 700;
+		font-style: normal;
+	}
+	&__button{
+		background-color: $pale_gray;
+		padding: 20px;
+	}
+	&__gender{
+		margin-top: 15px;
+		padding-bottom: 15px;
+		span{
+			color: $main_color;
+			font-family: "Arial";
+			font-size: 14px;
+			font-weight: 700;
+		}
+		label{
+			font-weight: 400;
+		}
+		&_input{
+			padding-left: 28px;
+			display: inline-block;
+			label{
+				color: $color_success;
+				font-size: 14px;
+				padding-left: 3px;
+				font-style: normal;
+			}
+			input:checked + label {
+			    padding: 0;
+			    color: $main_color;
+			    width: 18px;
+			    height: 18px;
+			}
+			input{
+				border: none;
+			}
+		} 
+	}
+	&__access{
+		margin-top: 20px;
+		label{
+			color: $color_success;
+			font-size: 14px;
+			padding-left: 3px;
+			font-style: normal;
+			font-weight: 400;
+		}
+		input:checked + label {
+		    padding: 0;
+		    color: $main_color;
+		}
+		input{
+			border: none;
+		}
+	}
+	&__btnadd{
+		margin: 40px 0;
+		border-radius: 0 !important;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.select2-container .select2-selection--single {
+		height: 22px;
+	}
+
+}
+.select__label{
+	margin-bottom: -4px;
+	display: block;
+	&:after{
+		display: inline-block;
+		vertical-align: middle;
+		content: "\f107";
+		font: normal normal normal 16px/1 FontAwesome;
+		color: $color_warning;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&.open {
+		&:after {
+			// transform: rotate(180deg);
+		}
+	}
+}
