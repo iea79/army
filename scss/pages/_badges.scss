@@ -72,7 +72,11 @@
 	.select2-container .select2-selection--single {
 		height: 22px;
 	}
-
+	.select2-container--default .select2-selection--single .select2-selection__placeholder {
+		&:after {
+			display: none;
+		}
+	}
 }
 .select__label{
 	margin-bottom: -4px;
