@@ -1,14 +1,16 @@
 .aside {
-	position: fixed;
+	// position: absolute;
+	float: left;
 	width: 330px;
-    height: 100%;
-	overflow-x: auto;
+	min-height: 100%;
+	background-color: #ececec;
+ //    height: 100%;
+	// overflow-x: auto;
 	z-index: 10;
 	&__wrapper {
 		padding: 12px 30px 150px;
 		min-height: 100%;
 		position: relative;
-		background-color: #ececec;
 		
 	}
 }
