@@ -59,7 +59,7 @@
 			display: none !important;
 		}
 		span{
-		    outline: none !important;
+		    // outline: none !important;
 		}
 	}
 	&__logo{
@@ -73,17 +73,17 @@
 			padding-bottom: 5px;
 		}
 		input{
-			display: inline-block;
-			width: 50%;
-			border: none;
-			color: $color_success;
-			font-size: 14px;
-			font-weight: 400;
-			text-transform: uppercase;
+			// display: inline-block;
+			// width: 50%;
+			// border: none;
+			// color: $color_success;
+			// font-size: 14px;
+			// font-weight: 400;
+			// text-transform: uppercase;
 		}
-		label{
-			display: block;
-		}
+		// label{
+		// 	display: block;
+		// }
 	}
 	&__button{
 		margin-top: 0;

@@ -58,7 +58,7 @@
       <main class="main__content">
         <h1 class="page__title">Личный кабинет экспонента</h1>
         <div class="home__wrapbtn">
-          <div class="home__wrapbtn_btn"><a class="btn btn_white" href="img/home/download.png" download="download">Загрузить справочник экспонента<span class="btn_white_span"><img src="img/home/download.png"/></span></a></div>
+          <div class="home__wrapbtn_btn"><a class="btn btn_white" href="#" data-toggle="modal" data-target="#myModal">Загрузить справочник экспонента<span class="btn_white_span"><img src="img/home/download.png"/></span></a></div>
         </div>
         <div class="page__titleSecond">Уведомления</div>
         <div class="notice">
@@ -148,6 +148,19 @@
       </main>
       <!-- end main__content -->
     </div>
+    <!-- Button trigger modal myModal -->
+    <!-- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal") Click to open modal-->
+    <!-- begin Modal myModal -->
+    <div class="modal fade myModal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">Header</div>
+          <div class="modal-body">Body</div>
+          <div class="modal-footer">Footer</div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal myModal -->
     <script src="js/jquery.js"></script>
     <script src="js/modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
