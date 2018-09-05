@@ -9,7 +9,7 @@
 		top: 0;
 		height: 50px;
 		background-color: #f8f8f8;
-		z-index: -1;
+		// z-index: 0;
 	}
 	@extend %clear_a;
 	&__left {
@@ -23,6 +23,7 @@
 	}
 	&__item {
 		float: left;
+		position: relative;
 	}
 	&__toggle {
 		font-size: 14px;

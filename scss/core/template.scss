@@ -37,4 +37,13 @@ body {
 	@extend %clear_a;
 }
 
+a {
+	color: $color_warning;
+	text-decoration: none;
+	transition: all .3s;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 
