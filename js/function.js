@@ -33,15 +33,6 @@ $(document).ready(function() {
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
-	// // First screen full height
-	// function setHeiHeight() {
-	//     $('.full__height').css({
-	//         minHeight: $(window).height() + 'px'
-	//     });
-	// }
-	// setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-	// $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
-
 
 	$('[href*="#"]').click(function(event) {
 		event.preventDefault();
@@ -62,13 +53,6 @@ $(document).ready(function() {
    		$('.filters__drop').toggleClass('open');
    	});
 
-   	$('select').each(function(index, el) {
-   		$(this).select2({
-	   		placeholder: $(this).data('placeholder'),
-		    minimumResultsForSearch: 15
-	   	});
-   	});
-
 
     // accordion
     $('.accordion__toggle').on('click', function() {
@@ -83,6 +67,29 @@ $(document).ready(function() {
         $("#filename").text(filename);
     });
 
+    $('.accordion__toggle_icon').on('click', function(){
+        $(this).closest('.accordion__item').remove();
+    });
+
+    $( "#datepicker" ).datepicker();
+
+    selectEvents();
+
+});
+
+
+function selectEvents() {
+
+    // инит и проставление плэсхолдеров. если используем вместе с label то плэйсхолдер пустой
+    $('select').each(function(index, el) {
+        $(this).select2({
+            placeholder: $(this).data('placeholder'),
+            minimumResultsForSearch: 15
+        });
+    });
+
+
+    // селект с чекбоксами
     $('.js_multiplecheck').select2({
         closeOnSelect: false
     })
@@ -94,25 +101,14 @@ $(document).ready(function() {
         container.appendTo(wrap);
     });
 
-    $('.accordion__toggle_icon').on('click', function(){
-        $(this).closest('.accordion__item').remove();
-    });
-
-    $( "#datepicker" ).datepicker();
-
-    // $('.js_selectfullwidth').on('select2:open', function() {
-    //     var container = $('.select2-container').last();
-    //     var wrap = $(this).closest('.js_selectfullwrap');
-    //     container.addClass('js_selectfull');
-    //     container.appendTo(wrap);
-    // });
-
+    // select2 в фильтрах
     $('.filters__item select').on('select2:open', function() {
         var container = $('.select2-container').last();
         var wrap = $(this).closest('.filters__item');
         container.addClass('filters__selectDrop');
     });
 
+    // Открытие по клику на label
     var selectLabelClick = false;
 
     $('.select__label').on('click', function() {
@@ -142,5 +138,5 @@ $(document).ready(function() {
         }
     });
 
-});
+}
 
